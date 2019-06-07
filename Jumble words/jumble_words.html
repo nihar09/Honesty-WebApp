@@ -1,0 +1,2189 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <title>Jumble Words</title>
+  
+  
+  	<script type="text/javascript">
+      function timeout()
+      {
+        //var minute=Math.floor((timeLeft-(hours*60*60))/60);
+        var minute=Math.floor(timeLeft/60);
+        var second=timeLeft%60;
+        //var hrs=checktime(hours);
+        var mint=checktime(minute);
+        var sec=checktime(second);
+        if(timeLeft<0)
+        {
+            clearTimeout(tm);
+                document.getElementById("result").innerHTML = "";
+                document.getElementById("puzzle").innerHTML = "";
+                document.getElementById("result1").innerHTML = "";
+                document.getElementById("puzzle1").innerHTML = "";
+                document.getElementById("result2").innerHTML = "";
+                document.getElementById("puzzle2").innerHTML = "";
+                document.getElementById("result3").innerHTML = "";
+                document.getElementById("puzzle3").innerHTML = "";
+                document.getElementById("result4").innerHTML = "";
+                document.getElementById("puzzle4").innerHTML = "";
+                document.getElementById("result5").innerHTML = "";
+                document.getElementById("puzzle5").innerHTML = "";
+                document.getElementById("result6").innerHTML = "";
+                document.getElementById("puzzle6").innerHTML = "";
+                document.getElementById("result7").innerHTML = "";
+                document.getElementById("puzzle7").innerHTML = "";
+                document.getElementById("result8").innerHTML = "";
+                document.getElementById("puzzle8").innerHTML = "";
+                document.getElementById("result9").innerHTML = "";
+                document.getElementById("puzzle9").innerHTML = "";
+                document.getElementById("result10").innerHTML = "";
+                document.getElementById("puzzle10").innerHTML = "";
+                document.getElementById("result11").innerHTML = "";
+                document.getElementById("puzzle11").innerHTML = "";
+                document.getElementById("result12").innerHTML = "";
+                document.getElementById("puzzle12").innerHTML = "";
+                document.getElementById("result13").innerHTML = "";
+                document.getElementById("puzzle13").innerHTML = "";
+                document.getElementById("result14").innerHTML = "";
+                document.getElementById("puzzle14").innerHTML = "";
+                document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+                document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+                 document.getElementById("coins").hidden = false;
+                 document.getElementById("drop").play();
+                 document.getElementById("my_audio").pause();
+            document.getElementById("my_end").play();
+            delay(5000);
+            document.getElementById("my_end").pause();
+        }
+        else
+        {
+            document.getElementById("time").innerHTML=mint+":"+sec;
+        }
+        timeLeft--;
+        var tm=setTimeout(function(){timeout()},1000);
+      }
+      function checktime(msg)
+      {
+        if(msg<10)
+        {
+            msg="0"+msg;
+        }
+        return msg;
+      }
+      </script>  
+  
+      <style type="text/css">
+      	/*All the CSS is for styling purposes. You can have a sortable list without any CSS*/
+
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%; 
+  background-color: none;
+}
+
+body{
+	font-family: arial, sans-serif;
+	font-size: 1.5em;
+  background-color: #fcf7ff;
+}
+
+#wrapper {
+  width: 75%;
+  margin: 20px auto;
+}
+
+#wrapper1 {
+  width: 75%;
+  margin: 20px auto;
+}
+
+#wrapper2 {
+  width: 75%;
+  margin: 20px auto;
+}
+
+#wrapper3 {
+  width: 75%;
+  margin: 20px auto;
+}
+
+#wrapper4 {
+  width: 75%;
+  margin: 20px auto;
+}
+
+#wrapper5 {
+  width: 75%;
+  margin: 20px auto;
+}
+
+#wrapper6 {
+  width: 75%;
+  margin: 20px auto;
+}
+
+#wrapper7 {
+  width: 75%;
+  margin: 20px auto;
+}
+
+#wrapper8 {
+  width: 75%;
+  margin: 20px auto;
+}
+
+#wrapper9 {
+  width: 75%;
+  margin: 20px auto;
+}
+
+#wrapper10 {
+  width: 75%;
+  margin: 20px auto;
+}
+
+#wrapper11 {
+  width: 75%;
+  margin: 20px auto;
+}
+
+#wrapper12 {
+  width: 75%;
+  margin: 20px auto;
+}
+
+#wrapper13 {
+  width: 75%;
+  margin: 20px auto;
+}
+
+#wrapper14 {
+  width: 75%;
+  margin: 20px auto;
+}
+
+section{
+	width: 40px;
+  height: 30px;
+  padding: 1px;
+	background: #D8BFD8;
+	border-style: solid;
+  border-color: #222;  
+  border-width: 0 0 2px 2px;
+  color: #000000;
+  text-align: center;
+  transition: color 0.3s, background-color 0.3s;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 2px;
+  font-weight: bold;
+  font-size: 14pt ; font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+section:hover{
+  background: #ccc;
+  color: gray;
+}
+
+section:active{
+  box-shadow: 0px 0px 50px gray ;
+  -webkit-transform: scale(1.05);
+  -webkit-transform-origin: -30 100%;
+  -webkit-transform: rotate(-3deg);
+}
+
+#result, #puzzle {
+  display: none;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  color: #913425;
+  font-weight: bold;
+}
+
+
+#result1, #puzzle1 {
+  display: none;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  color: #913425;
+  font-weight: bold;
+}
+
+#result2, #puzzle2 {
+  display: none;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  color: #913425;
+  font-weight: bold;
+}
+
+#result3, #puzzle3 {
+  display: none;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  color: #913425;
+  font-weight: bold;
+}
+
+#result4, #puzzle4 {
+  display: none;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  color: #913425;
+  font-weight: bold;
+}
+
+#result5, #puzzle5 {
+  display: none;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  color: #913425;
+  font-weight: bold;
+}
+
+#result6, #puzzle6 {
+  display: none;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  color: #913425;
+  font-weight: bold;
+}
+
+#result7, #puzzle7 {
+  display: none;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  color: #913425;
+  font-weight: bold;
+}
+
+#result8, #puzzle8 {
+  display: none;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  color: #913425;
+  font-weight: bold;
+}
+
+#result9, #puzzle9 {
+  display: none;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  color: #913425;
+  font-weight: bold;
+}
+
+#result10, #puzzle10 {
+  display: none;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  color: #913425;
+  font-weight: bold;
+}
+
+#result11, #puzzle11 {
+  display: none;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  color: #913425;
+  font-weight: bold;
+}
+
+#result12, #puzzle12 {
+  display: none;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  color: #913425;
+  font-weight: bold;
+}
+
+#result13, #puzzle13 {
+  display: none;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  color: #913425;
+  font-weight: bold;
+}
+
+#result14, #puzzle14 {
+  display: none;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  color: #913425;
+  font-weight: bold;
+}
+
+.ml2 {
+  font-weight: bold;
+  font-size: 35pt;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+  font-size: 35pt;
+}
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 1px 12px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}
+div.angrytext {
+ font-size:70px;
+ font-weight:bold;
+ color:#4794D3;
+ width:300px;
+ margin:90px auto;
+
+ -webkit-animation: alert 2s linear 0s infinite normal ;
+ animation: alert 2s linear 0s infinite normal ;
+}
+
+@-webkit-keyframes alert {
+  0%{
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  5%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  10%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  15%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  20%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  25%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  30%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  35%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  40%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  45%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  50%{
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+}
+
+@keyframes alert {
+  0%{
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  }
+  5%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  10%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  15%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  20%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  25%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  30%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  35%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  40%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  45%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  50%{
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  }
+}
+
+div.angrytime {
+ -webkit-animation: alert 2s linear 0s infinite normal ;
+ animation: alert 2s linear 0s infinite normal ;
+}
+
+@-webkit-keyframes alert {
+  0%{
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  5%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  10%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  15%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  20%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  25%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  30%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  35%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  40%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  45%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  50%{
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+}
+
+@keyframes alert {
+  0%{
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  }
+  5%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  10%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  15%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  20%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  25%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  30%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  35%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  40%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  45%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  50%{
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  }
+}
+      </style>
+
+
+  
+</head>
+
+<body>
+  <audio src="Fast-clock-ticking-sound-effect.mp3" id="my_audio" loop="loop"></audio>
+  <audio src="Train Horn Low-SoundBible.com-1744689113.mp3" id="my_end"></audio>
+  <audio src="coindrop.mp3" id="drop" loop="loop"></audio>
+  <script type="text/javascript">
+    window.onload=function(){
+      document.getElementById("time").innerHTML = timeout();
+      var aud = document.getElementById("my_audio").play();
+    }
+  </script>
+	<div class="d-flex justify-content-center bg-secondary mb-3">
+<img src="Logo.png" width="700px" height="700px" style="position: fixed; margin: 0; z-index: -1; opacity: 0.05">
+</div>
+	<script type="text/javascript">
+        var timeLeft=7*60;
+    </script>
+
+    <div class='container angrytext' style="margin-right: -55%; margin-top: -10px; position: absolute; z-index: -1"><img src="clock.png" width="150px" height="150px"></div>
+    <h3><div class="container angrytime" id="time" style="margin-top: 45px; margin-left: 45px; float: left; font-size: 18pt">Timeout</div></h3><br>
+  <h3 id="scoring" style="font-size: 18pt ; font-family: Comic Sans MS, Comic Sans, cursive; color: #BA55D3; float: right;">Your Score is 0</h3><br><br><br>
+  <center><h2 id="totscore" style="font-family: Comic Sans MS, Comic Sans, cursive; font-weight: bold; color: #BA55D3"></h2></center>
+    <center><h2 id="totcoins" style="font-family: Comic Sans MS, Comic Sans, cursive; font-weight: bold; color: #BA55D3"></h2></center>
+    <center><img src="coins.gif" id="coins" hidden="true" width="200px" height="200px"></center>
+  <h1 class="ml2" id="wishes" style="text-align: center; font-family: Comic Sans MS, Comic Sans, cursive;"></h1>
+  <div class="container" align="center">
+    <img src="party1.gif" id="part1" hidden="true" width="300px" height="400px">
+    <img src="good job.gif" id="goodjob" hidden="true" width="300px" height="400px">
+    <img src="party1.gif" id="part2" hidden="true" width="300px" height="400px">
+  </div>
+  <script type="text/javascript">
+  	var score = 0;
+  </script>
+  <div class="sortable-items" id="wrapper"><!--.sortable-items makes the child elements sortable. It's called in the JS to have the .sortable() function.-->
+  <div id="puzzle"></div>
+  <div id="result" style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">HONESTY</div>
+  <center><input style='font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;' class = 'button button1' type='button' name='show' id='show1' value='Show Answer' onclick='ans1()'></center><br>
+</div><!-- #wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+   <script type="text/javascript">
+	// SORTABLE
+  $(function() {
+    var word = ("HONESTY");
+    var rand = [];
+    var puzzle = $("#puzzle").hide();
+    
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function(){return 0.5-Math.random()});
+    
+    //LABEL
+    $.each(jumble,function(index,letter){
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+            
+    puzzle.sortable({
+      items: "section",
+      stop: function(event, ui) {
+
+        var ordered = true;        
+        $(this).find("section").each(function(i, el){
+          ordered = (letters[i] === $(el).html()) ? ordered : false;     
+        }); 
+        if(ordered)
+        {
+          $("#result").show();
+          score++;
+          document.getElementById("scoring").innerHTML = "Your Score is " + score;
+          puzzle.sortable().hide();
+          if(score == 12)
+	{
+		document.getElementById("result").innerHTML = "";
+		document.getElementById("puzzle").innerHTML = "";
+		document.getElementById("result1").innerHTML = "";
+		document.getElementById("puzzle1").innerHTML = "";
+		document.getElementById("result2").innerHTML = "";
+		document.getElementById("puzzle2").innerHTML = "";
+		document.getElementById("result3").innerHTML = "";
+		document.getElementById("puzzle3").innerHTML = "";
+		document.getElementById("result4").innerHTML = "";
+		document.getElementById("puzzle4").innerHTML = "";
+		document.getElementById("result5").innerHTML = "";
+		document.getElementById("puzzle5").innerHTML = "";
+		document.getElementById("result6").innerHTML = "";
+		document.getElementById("puzzle6").innerHTML = "";
+		document.getElementById("result7").innerHTML = "";
+		document.getElementById("puzzle7").innerHTML = "";
+		document.getElementById("result8").innerHTML = "";
+		document.getElementById("puzzle8").innerHTML = "";
+		document.getElementById("result9").innerHTML = "";
+		document.getElementById("puzzle9").innerHTML = "";
+    document.getElementById("result10").innerHTML = "";
+    document.getElementById("puzzle10").innerHTML = "";
+    document.getElementById("result11").innerHTML = "";
+    document.getElementById("puzzle11").innerHTML = "";
+    document.getElementById("result12").innerHTML = "";
+    document.getElementById("puzzle12").innerHTML = "";
+    document.getElementById("result13").innerHTML = "";
+    document.getElementById("puzzle13").innerHTML = "";
+    document.getElementById("result14").innerHTML = "";
+    document.getElementById("puzzle14").innerHTML = "";
+		document.getElementById("wishes").innerHTML = "Congratulations!! You Solved all the words!";
+    document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+    document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+    document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+     document.getElementById("coins").hidden = false;
+     document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+	}
+        }
+      }
+    }).show();    
+  });
+
+  function ans1()
+    {
+      $("#result").show();
+      document.getElementById("puzzle").innerHTML = "";
+    }
+
+  
+</script>
+
+
+
+<div class="sortable-items" id="wrapper1"><!--.sortable-items makes the child elements sortable. It's called in the JS to have the .sortable() function.-->
+  <div id="puzzle1"></div>
+  <div id="result1" style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">LIE</div>
+  <center><input style='font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;' class = 'button button1' type='button' name='show' id='show2' value='Show Answer' onclick='ans2()'></center><br>
+</div><!-- #wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+
+  
+
+   <script type="text/javascript">
+	// SORTABLE
+  $(function() {
+    var word = ("LIE");
+    var rand = [];
+    var puzzle = $("#puzzle1").hide();
+    
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function(){return 0.5-Math.random()});
+    
+    //LABEL
+    $.each(jumble,function(index,letter){
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+            
+    puzzle.sortable({
+      items: "section",
+      stop: function(event, ui) {
+
+        var ordered = true;        
+        $(this).find("section").each(function(i, el){
+          ordered = (letters[i] === $(el).html()) ? ordered : false;     
+        }); 
+        if(ordered)
+        {
+          $("#result1").show();
+          score++;
+          document.getElementById("scoring").innerHTML = "Your Score is " + score;
+          puzzle.sortable().hide();
+          if(score == 15)
+	{
+		document.getElementById("result").innerHTML = "";
+		document.getElementById("puzzle").innerHTML = "";
+		document.getElementById("result1").innerHTML = "";
+		document.getElementById("puzzle1").innerHTML = "";
+		document.getElementById("result2").innerHTML = "";
+		document.getElementById("puzzle2").innerHTML = "";
+		document.getElementById("result3").innerHTML = "";
+		document.getElementById("puzzle3").innerHTML = "";
+		document.getElementById("result4").innerHTML = "";
+		document.getElementById("puzzle4").innerHTML = "";
+		document.getElementById("result5").innerHTML = "";
+		document.getElementById("puzzle5").innerHTML = "";
+		document.getElementById("result6").innerHTML = "";
+		document.getElementById("puzzle6").innerHTML = "";
+		document.getElementById("result7").innerHTML = "";
+		document.getElementById("puzzle7").innerHTML = "";
+		document.getElementById("result8").innerHTML = "";
+		document.getElementById("puzzle8").innerHTML = "";
+		document.getElementById("result9").innerHTML = "";
+		document.getElementById("puzzle9").innerHTML = "";
+    document.getElementById("result10").innerHTML = "";
+    document.getElementById("puzzle10").innerHTML = "";
+    document.getElementById("result11").innerHTML = "";
+    document.getElementById("puzzle11").innerHTML = "";
+    document.getElementById("result12").innerHTML = "";
+    document.getElementById("puzzle12").innerHTML = "";
+    document.getElementById("result13").innerHTML = "";
+    document.getElementById("puzzle13").innerHTML = "";
+    document.getElementById("result14").innerHTML = "";
+    document.getElementById("puzzle14").innerHTML = "";
+		document.getElementById("wishes").innerHTML = "Congratulations!! You Solved all the words!";
+    document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+    document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+                document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+                 document.getElementById("coins").hidden = false;
+                 document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+	}
+        }
+      	  
+      }
+    }).show();
+  });
+  function ans2()
+    {
+      $("#result1").show();
+      document.getElementById("puzzle1").innerHTML = "";
+    }
+       
+</script>
+
+
+<div class="sortable-items" id="wrapper2"><!--.sortable-items makes the child elements sortable. It's called in the JS to have the .sortable() function.-->
+  <div id="puzzle2"></div>
+  <div id="result2" style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">CHEAT</div>
+  <center><input style='font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;' class = 'button button1' type='button' name='show' id='show3' value='Show Answer' onclick='ans3()'></center><br>
+</div><!-- #wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+
+  
+
+   <script type="text/javascript">
+	// SORTABLE
+  $(function() {
+    var word = ("CHEAT");
+    var rand = [];
+    var puzzle = $("#puzzle2").hide();
+    
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function(){return 0.5-Math.random()});
+    
+    //LABEL
+    $.each(jumble,function(index,letter){
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+            
+    puzzle.sortable({
+      items: "section",
+      stop: function(event, ui) {
+
+        var ordered = true;        
+        $(this).find("section").each(function(i, el){
+          ordered = (letters[i] === $(el).html()) ? ordered : false;     
+        }); 
+        if(ordered){
+          $("#result2").show();
+          score++;
+          document.getElementById("scoring").innerHTML = "Your Score is " + score;
+          puzzle.sortable().hide();
+          if(score == 15)
+	{
+		document.getElementById("result").innerHTML = "";
+		document.getElementById("puzzle").innerHTML = "";
+		document.getElementById("result1").innerHTML = "";
+		document.getElementById("puzzle1").innerHTML = "";
+		document.getElementById("result2").innerHTML = "";
+		document.getElementById("puzzle2").innerHTML = "";
+		document.getElementById("result3").innerHTML = "";
+		document.getElementById("puzzle3").innerHTML = "";
+		document.getElementById("result4").innerHTML = "";
+		document.getElementById("puzzle4").innerHTML = "";
+		document.getElementById("result5").innerHTML = "";
+		document.getElementById("puzzle5").innerHTML = "";
+		document.getElementById("result6").innerHTML = "";
+		document.getElementById("puzzle6").innerHTML = "";
+		document.getElementById("result7").innerHTML = "";
+		document.getElementById("puzzle7").innerHTML = "";
+		document.getElementById("result8").innerHTML = "";
+		document.getElementById("puzzle8").innerHTML = "";
+		document.getElementById("result9").innerHTML = "";
+		document.getElementById("puzzle9").innerHTML = "";
+    document.getElementById("result10").innerHTML = "";
+    document.getElementById("puzzle10").innerHTML = "";
+    document.getElementById("result11").innerHTML = "";
+    document.getElementById("puzzle11").innerHTML = "";
+    document.getElementById("result12").innerHTML = "";
+    document.getElementById("puzzle12").innerHTML = "";
+    document.getElementById("result13").innerHTML = "";
+    document.getElementById("puzzle13").innerHTML = "";
+    document.getElementById("result14").innerHTML = "";
+    document.getElementById("puzzle14").innerHTML = "";
+		document.getElementById("wishes").innerHTML = "Congratulations!! You Solved all the words!";
+    document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+    document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+                document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+                 document.getElementById("coins").hidden = false;
+                 document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+	}
+          }
+      }
+    }).show();    
+  });
+  function ans3()
+    {
+      $("#result2").show();
+      document.getElementById("puzzle2").innerHTML = "";
+    }
+</script>
+
+
+<div class="sortable-items" id="wrapper3"><!--.sortable-items makes the child elements sortable. It's called in the JS to have the .sortable() function.-->
+  <div id="puzzle3"></div>
+  <div id="result3" style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">REWARD</div>
+  <center><input style='font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;' class = 'button button1' type='button' name='show' id='show4' value='Show Answer' onclick='ans4()'></center><br>
+</div><!-- #wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+
+  
+
+   <script type="text/javascript">
+	// SORTABLE
+  $(function() {
+    var word = ("REWARD");
+    var rand = [];
+    var puzzle = $("#puzzle3").hide();
+    
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function(){return 0.5-Math.random()});
+    
+    //LABEL
+    $.each(jumble,function(index,letter){
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+            
+    puzzle.sortable({
+      items: "section",
+      stop: function(event, ui) {
+
+        var ordered = true;        
+        $(this).find("section").each(function(i, el){
+          ordered = (letters[i] === $(el).html()) ? ordered : false;     
+        }); 
+        if(ordered){
+          $("#result3").show();
+      	  score++;
+      	  document.getElementById("scoring").innerHTML = "Your Score is " + score;
+      	  puzzle.sortable().hide();
+      	  if(score == 15)
+	{
+		document.getElementById("result").innerHTML = "";
+		document.getElementById("puzzle").innerHTML = "";
+		document.getElementById("result1").innerHTML = "";
+		document.getElementById("puzzle1").innerHTML = "";
+		document.getElementById("result2").innerHTML = "";
+		document.getElementById("puzzle2").innerHTML = "";
+		document.getElementById("result3").innerHTML = "";
+		document.getElementById("puzzle3").innerHTML = "";
+		document.getElementById("result4").innerHTML = "";
+		document.getElementById("puzzle4").innerHTML = "";
+		document.getElementById("result5").innerHTML = "";
+		document.getElementById("puzzle5").innerHTML = "";
+		document.getElementById("result6").innerHTML = "";
+		document.getElementById("puzzle6").innerHTML = "";
+		document.getElementById("result7").innerHTML = "";
+		document.getElementById("puzzle7").innerHTML = "";
+		document.getElementById("result8").innerHTML = "";
+		document.getElementById("puzzle8").innerHTML = "";
+		document.getElementById("result9").innerHTML = "";
+		document.getElementById("puzzle9").innerHTML = "";
+    document.getElementById("result10").innerHTML = "";
+    document.getElementById("puzzle10").innerHTML = "";
+    document.getElementById("result11").innerHTML = "";
+    document.getElementById("puzzle11").innerHTML = "";
+    document.getElementById("result12").innerHTML = "";
+    document.getElementById("puzzle12").innerHTML = "";
+    document.getElementById("result13").innerHTML = "";
+    document.getElementById("puzzle13").innerHTML = "";
+    document.getElementById("result14").innerHTML = "";
+    document.getElementById("puzzle14").innerHTML = "";
+		document.getElementById("wishes").innerHTML = "Congratulations!! You Solved all the words!";
+    document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+    document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+                document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+                 document.getElementById("coins").hidden = false;
+                 document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+	}
+      }
+      }
+    }).show();    
+  });
+  function ans4()
+    {
+      $("#result3").show();
+      document.getElementById("puzzle3").innerHTML = "";
+    }
+</script>
+
+
+<div class="sortable-items" id="wrapper4"><!--.sortable-items makes the child elements sortable. It's called in the JS to have the .sortable() function.-->
+  <div id="puzzle4"></div>
+  <div id="result4" style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">TRUTH</div>
+  <center><input style='font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;' class = 'button button1' type='button' name='show' id='show5' value='Show Answer' onclick='ans5()'></center><br>
+</div><!-- #wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+
+  
+
+   <script type="text/javascript">
+	// SORTABLE
+  $(function() {
+    var word = ("TRUTH");
+    var rand = [];
+    var puzzle = $("#puzzle4").hide();
+    
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function(){return 0.5-Math.random()});
+    
+    //LABEL
+    $.each(jumble,function(index,letter){
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+            
+    puzzle.sortable({
+      items: "section",
+      stop: function(event, ui) {
+
+        var ordered = true;        
+        $(this).find("section").each(function(i, el){
+          ordered = (letters[i] === $(el).html()) ? ordered : false;     
+        }); 
+        if(ordered){
+          $("#result4").show();
+      	  score++;
+          document.getElementById("scoring").innerHTML = "Your Score is " + score;
+          puzzle.sortable().hide();
+          if(score == 15)
+	{
+		document.getElementById("result").innerHTML = "";
+		document.getElementById("puzzle").innerHTML = "";
+		document.getElementById("result1").innerHTML = "";
+		document.getElementById("puzzle1").innerHTML = "";
+		document.getElementById("result2").innerHTML = "";
+		document.getElementById("puzzle2").innerHTML = "";
+		document.getElementById("result3").innerHTML = "";
+		document.getElementById("puzzle3").innerHTML = "";
+		document.getElementById("result4").innerHTML = "";
+		document.getElementById("puzzle4").innerHTML = "";
+		document.getElementById("result5").innerHTML = "";
+		document.getElementById("puzzle5").innerHTML = "";
+		document.getElementById("result6").innerHTML = "";
+		document.getElementById("puzzle6").innerHTML = "";
+		document.getElementById("result7").innerHTML = "";
+		document.getElementById("puzzle7").innerHTML = "";
+		document.getElementById("result8").innerHTML = "";
+		document.getElementById("puzzle8").innerHTML = "";
+		document.getElementById("result9").innerHTML = "";
+		document.getElementById("puzzle9").innerHTML = "";
+    document.getElementById("result10").innerHTML = "";
+    document.getElementById("puzzle10").innerHTML = "";
+    document.getElementById("result11").innerHTML = "";
+    document.getElementById("puzzle11").innerHTML = "";
+    document.getElementById("result12").innerHTML = "";
+    document.getElementById("puzzle12").innerHTML = "";
+    document.getElementById("result13").innerHTML = "";
+    document.getElementById("puzzle13").innerHTML = "";
+    document.getElementById("result14").innerHTML = "";
+    document.getElementById("puzzle14").innerHTML = "";
+		document.getElementById("wishes").innerHTML = "Congratulations!! You Solved all the words!";
+    document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+    document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+                document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+                 document.getElementById("coins").hidden = false;
+                 document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+	}
+      }
+      }
+    }).show();    
+  });
+  function ans5()
+    {
+      $("#result4").show();
+      document.getElementById("puzzle4").innerHTML = "";
+    }
+</script>
+
+
+<div class="sortable-items" id="wrapper5"><!--.sortable-items makes the child elements sortable. It's called in the JS to have the .sortable() function.-->
+  <div id="puzzle5"></div>
+  <div id="result5" style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">PUNISHMENT</div>
+  <center><input style='font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;' class = 'button button1' type='button' name='show' id='show6' value='Show Answer' onclick='ans6()'></center><br>
+</div><!-- #wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+
+  
+
+   <script type="text/javascript">
+	// SORTABLE
+  $(function() {
+    var word = ("PUNISHMENT");
+    var rand = [];
+    var puzzle = $("#puzzle5").hide();
+    
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function(){return 0.5-Math.random()});
+    
+    //LABEL
+    $.each(jumble,function(index,letter){
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+            
+    puzzle.sortable({
+      items: "section",
+      stop: function(event, ui) {
+
+        var ordered = true;        
+        $(this).find("section").each(function(i, el){
+          ordered = (letters[i] === $(el).html()) ? ordered : false;     
+        }); 
+        if(ordered){
+          $("#result5").show();
+          score++;
+          document.getElementById("scoring").innerHTML = "Your Score is " + score;
+          puzzle.sortable().hide();
+          if(score == 15)
+	{
+		document.getElementById("result").innerHTML = "";
+		document.getElementById("puzzle").innerHTML = "";
+		document.getElementById("result1").innerHTML = "";
+		document.getElementById("puzzle1").innerHTML = "";
+		document.getElementById("result2").innerHTML = "";
+		document.getElementById("puzzle2").innerHTML = "";
+		document.getElementById("result3").innerHTML = "";
+		document.getElementById("puzzle3").innerHTML = "";
+		document.getElementById("result4").innerHTML = "";
+		document.getElementById("puzzle4").innerHTML = "";
+		document.getElementById("result5").innerHTML = "";
+		document.getElementById("puzzle5").innerHTML = "";
+		document.getElementById("result6").innerHTML = "";
+		document.getElementById("puzzle6").innerHTML = "";
+		document.getElementById("result7").innerHTML = "";
+		document.getElementById("puzzle7").innerHTML = "";
+		document.getElementById("result8").innerHTML = "";
+		document.getElementById("puzzle8").innerHTML = "";
+		document.getElementById("result9").innerHTML = "";
+		document.getElementById("puzzle9").innerHTML = "";
+    document.getElementById("result10").innerHTML = "";
+    document.getElementById("puzzle10").innerHTML = "";
+    document.getElementById("result11").innerHTML = "";
+    document.getElementById("puzzle11").innerHTML = "";
+    document.getElementById("result12").innerHTML = "";
+    document.getElementById("puzzle12").innerHTML = "";
+    document.getElementById("result13").innerHTML = "";
+    document.getElementById("puzzle13").innerHTML = "";
+    document.getElementById("result14").innerHTML = "";
+    document.getElementById("puzzle14").innerHTML = "";
+		document.getElementById("wishes").innerHTML = "Congratulations!! You Solved all the words!";
+    document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+    document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+                document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+                 document.getElementById("coins").hidden = false;
+                 document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+	}
+      }
+      }
+    }).show();    
+  });
+  function ans6()
+    {
+      $("#result5").show();
+      document.getElementById("puzzle5").innerHTML = "";
+    }
+</script>
+
+
+<div class="sortable-items" id="wrapper6"><!--.sortable-items makes the child elements sortable. It's called in the JS to have the .sortable() function.-->
+  <div id="puzzle6"></div>
+  <div id="result6" style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">INTEGRITY</div>
+  <center><input style='font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;' class = 'button button1' type='button' name='show' id='show7' value='Show Answer' onclick='ans7()'></center><br>
+</div><!-- #wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+
+  
+
+   <script type="text/javascript">
+	// SORTABLE
+  $(function() {
+    var word = ("INTEGRITY");
+    var rand = [];
+    var puzzle = $("#puzzle6").hide();
+    
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function(){return 0.5-Math.random()});
+    
+    //LABEL
+    $.each(jumble,function(index,letter){
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+            
+    puzzle.sortable({
+      items: "section",
+      stop: function(event, ui) {
+
+        var ordered = true;        
+        $(this).find("section").each(function(i, el){
+          ordered = (letters[i] === $(el).html()) ? ordered : false;     
+        }); 
+        if(ordered){
+          $("#result6").show();
+          score++;
+          document.getElementById("scoring").innerHTML = "Your Score is " + score;
+          puzzle.sortable().hide();
+          if(score == 15)
+	{
+		document.getElementById("result").innerHTML = "";
+		document.getElementById("puzzle").innerHTML = "";
+		document.getElementById("result1").innerHTML = "";
+		document.getElementById("puzzle1").innerHTML = "";
+		document.getElementById("result2").innerHTML = "";
+		document.getElementById("puzzle2").innerHTML = "";
+		document.getElementById("result3").innerHTML = "";
+		document.getElementById("puzzle3").innerHTML = "";
+		document.getElementById("result4").innerHTML = "";
+		document.getElementById("puzzle4").innerHTML = "";
+		document.getElementById("result5").innerHTML = "";
+		document.getElementById("puzzle5").innerHTML = "";
+		document.getElementById("result6").innerHTML = "";
+		document.getElementById("puzzle6").innerHTML = "";
+		document.getElementById("result7").innerHTML = "";
+		document.getElementById("puzzle7").innerHTML = "";
+		document.getElementById("result8").innerHTML = "";
+		document.getElementById("puzzle8").innerHTML = "";
+		document.getElementById("result9").innerHTML = "";
+		document.getElementById("puzzle9").innerHTML = "";
+    document.getElementById("result10").innerHTML = "";
+    document.getElementById("puzzle10").innerHTML = "";
+    document.getElementById("result11").innerHTML = "";
+    document.getElementById("puzzle11").innerHTML = "";
+    document.getElementById("result12").innerHTML = "";
+    document.getElementById("puzzle12").innerHTML = "";
+    document.getElementById("result13").innerHTML = "";
+    document.getElementById("puzzle13").innerHTML = "";
+    document.getElementById("result14").innerHTML = "";
+    document.getElementById("puzzle14").innerHTML = "";
+		document.getElementById("wishes").innerHTML = "Congratulations!! You Solved all the words!";
+    document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+    document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+                document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+                 document.getElementById("coins").hidden = false;
+                 document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+	}
+      }
+      }
+    }).show();    
+  });
+  function ans7()
+    {
+      $("#result6").show();
+      document.getElementById("puzzle6").innerHTML = "";
+    }
+</script>
+
+
+
+<div class="sortable-items" id="wrapper7"><!--.sortable-items makes the child elements sortable. It's called in the JS to have the .sortable() function.-->
+  <div id="puzzle7"></div>
+  <div id="result7" style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">AUTHENTIC</div>
+  <center><input style='font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;' class = 'button button1' type='button' name='show' id='show8' value='Show Answer' onclick='ans8()'></center><br>
+</div><!-- #wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+
+  
+
+   <script type="text/javascript">
+	// SORTABLE
+  $(function() {
+    var word = ("AUTHENTIC");
+    var rand = [];
+    var puzzle = $("#puzzle7").hide();
+    
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function(){return 0.5-Math.random()});
+    
+    //LABEL
+    $.each(jumble,function(index,letter){
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+            
+    puzzle.sortable({
+      items: "section",
+      stop: function(event, ui) {
+
+        var ordered = true;        
+        $(this).find("section").each(function(i, el){
+          ordered = (letters[i] === $(el).html()) ? ordered : false;     
+        }); 
+        if(ordered){
+          $("#result7").show();
+          score++;
+          document.getElementById("scoring").innerHTML = "Your Score is " + score;
+          puzzle.sortable().hide();
+          if(score == 15)
+	{
+		document.getElementById("result").innerHTML = "";
+		document.getElementById("puzzle").innerHTML = "";
+		document.getElementById("result1").innerHTML = "";
+		document.getElementById("puzzle1").innerHTML = "";
+		document.getElementById("result2").innerHTML = "";
+		document.getElementById("puzzle2").innerHTML = "";
+		document.getElementById("result3").innerHTML = "";
+		document.getElementById("puzzle3").innerHTML = "";
+		document.getElementById("result4").innerHTML = "";
+		document.getElementById("puzzle4").innerHTML = "";
+		document.getElementById("result5").innerHTML = "";
+		document.getElementById("puzzle5").innerHTML = "";
+		document.getElementById("result6").innerHTML = "";
+		document.getElementById("puzzle6").innerHTML = "";
+		document.getElementById("result7").innerHTML = "";
+		document.getElementById("puzzle7").innerHTML = "";
+		document.getElementById("result8").innerHTML = "";
+		document.getElementById("puzzle8").innerHTML = "";
+		document.getElementById("result9").innerHTML = "";
+		document.getElementById("puzzle9").innerHTML = "";
+    document.getElementById("result10").innerHTML = "";
+    document.getElementById("puzzle10").innerHTML = "";
+    document.getElementById("result11").innerHTML = "";
+    document.getElementById("puzzle11").innerHTML = "";
+    document.getElementById("result12").innerHTML = "";
+    document.getElementById("puzzle12").innerHTML = "";
+    document.getElementById("result13").innerHTML = "";
+    document.getElementById("puzzle13").innerHTML = "";
+    document.getElementById("result14").innerHTML = "";
+    document.getElementById("puzzle14").innerHTML = "";
+		document.getElementById("wishes").innerHTML = "Congratulations!! You Solved all the words!";
+    document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+    document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+                document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+                 document.getElementById("coins").hidden = false;
+                 document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+	}
+      }
+      }
+    }).show();    
+  });
+  function ans8()
+    {
+      $("#result7").show();
+      document.getElementById("puzzle7").innerHTML = "";
+    }
+</script>
+
+
+<div class="sortable-items" id="wrapper8"><!--.sortable-items makes the child elements sortable. It's called in the JS to have the .sortable() function.-->
+  <div id="puzzle8"></div>
+  <div id="result8" style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">BRIBE</div>
+  <center><input style='font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;' class = 'button button1' type='button' name='show' id='show9' value='Show Answer' onclick='ans9()'></center><br>
+</div><!-- #wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+
+  
+
+   <script type="text/javascript">
+	// SORTABLE
+  $(function() {
+    var word = ("BRIBE");
+    var rand = [];
+    var puzzle = $("#puzzle8").hide();
+    
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function(){return 0.5-Math.random()});
+    
+    //LABEL
+    $.each(jumble,function(index,letter){
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+            
+    puzzle.sortable({
+      items: "section",
+      stop: function(event, ui) {
+
+        var ordered = true;        
+        $(this).find("section").each(function(i, el){
+          ordered = (letters[i] === $(el).html()) ? ordered : false;     
+        }); 
+        if(ordered){
+          $("#result8").show();
+          score++;
+          document.getElementById("scoring").innerHTML = "Your Score is " + score;
+          puzzle.sortable().hide();
+          if(score == 15)
+	{
+		document.getElementById("result").innerHTML = "";
+		document.getElementById("puzzle").innerHTML = "";
+		document.getElementById("result1").innerHTML = "";
+		document.getElementById("puzzle1").innerHTML = "";
+		document.getElementById("result2").innerHTML = "";
+		document.getElementById("puzzle2").innerHTML = "";
+		document.getElementById("result3").innerHTML = "";
+		document.getElementById("puzzle3").innerHTML = "";
+		document.getElementById("result4").innerHTML = "";
+		document.getElementById("puzzle4").innerHTML = "";
+		document.getElementById("result5").innerHTML = "";
+		document.getElementById("puzzle5").innerHTML = "";
+		document.getElementById("result6").innerHTML = "";
+		document.getElementById("puzzle6").innerHTML = "";
+		document.getElementById("result7").innerHTML = "";
+		document.getElementById("puzzle7").innerHTML = "";
+		document.getElementById("result8").innerHTML = "";
+		document.getElementById("puzzle8").innerHTML = "";
+		document.getElementById("result9").innerHTML = "";
+		document.getElementById("puzzle9").innerHTML = "";
+    document.getElementById("result10").innerHTML = "";
+    document.getElementById("puzzle10").innerHTML = "";
+    document.getElementById("result11").innerHTML = "";
+    document.getElementById("puzzle11").innerHTML = "";
+    document.getElementById("result12").innerHTML = "";
+    document.getElementById("puzzle12").innerHTML = "";
+    document.getElementById("result13").innerHTML = "";
+    document.getElementById("puzzle13").innerHTML = "";
+    document.getElementById("result14").innerHTML = "";
+    document.getElementById("puzzle14").innerHTML = "";
+		document.getElementById("wishes").innerHTML = "Congratulations!! You Solved all the words!";
+    document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+    document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+                document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+                 document.getElementById("coins").hidden = false;
+                 document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+	}
+      }
+      }
+    }).show();    
+  });
+  function ans9()
+    {
+      $("#result8").show();
+      document.getElementById("puzzle8").innerHTML = "";
+    }
+</script>
+
+<div class="sortable-items" id="wrapper9"><!--.sortable-items makes the child elements sortable. It's called in the JS to have the .sortable() function.-->
+  <div id="puzzle9"></div>
+  <div id="result9" style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">POLICY</div>
+  <center><input style='font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;' class = 'button button1' type='button' name='show' id='show10' value='Show Answer' onclick='ans10()'></center><br>
+</div><!-- #wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+
+  
+
+   <script type="text/javascript">
+	// SORTABLE
+  $(function() {
+    var word = ("POLICY");
+    var rand = [];
+    var puzzle = $("#puzzle9").hide();
+    
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function(){return 0.5-Math.random()});
+    
+    //LABEL
+    $.each(jumble,function(index,letter){
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+            
+    puzzle.sortable({
+      items: "section",
+      stop: function(event, ui) {
+
+        var ordered = true;        
+        $(this).find("section").each(function(i, el){
+          ordered = (letters[i] === $(el).html()) ? ordered : false;     
+        }); 
+        if(ordered){
+          $("#result9").show();
+          score++;
+          document.getElementById("scoring").innerHTML = "Your Score is " + score;
+          puzzle.sortable().hide();
+          if(score == 15)
+	{
+		document.getElementById("result").innerHTML = "";
+		document.getElementById("puzzle").innerHTML = "";
+		document.getElementById("result1").innerHTML = "";
+		document.getElementById("puzzle1").innerHTML = "";
+		document.getElementById("result2").innerHTML = "";
+		document.getElementById("puzzle2").innerHTML = "";
+		document.getElementById("result3").innerHTML = "";
+		document.getElementById("puzzle3").innerHTML = "";
+		document.getElementById("result4").innerHTML = "";
+		document.getElementById("puzzle4").innerHTML = "";
+		document.getElementById("result5").innerHTML = "";
+		document.getElementById("puzzle5").innerHTML = "";
+		document.getElementById("result6").innerHTML = "";
+		document.getElementById("puzzle6").innerHTML = "";
+		document.getElementById("result7").innerHTML = "";
+		document.getElementById("puzzle7").innerHTML = "";
+		document.getElementById("result8").innerHTML = "";
+		document.getElementById("puzzle8").innerHTML = "";
+		document.getElementById("result9").innerHTML = "";
+		document.getElementById("puzzle9").innerHTML = "";
+    document.getElementById("result10").innerHTML = "";
+    document.getElementById("puzzle10").innerHTML = "";
+    document.getElementById("result11").innerHTML = "";
+    document.getElementById("puzzle11").innerHTML = "";
+    document.getElementById("result12").innerHTML = "";
+    document.getElementById("puzzle12").innerHTML = "";
+    document.getElementById("result13").innerHTML = "";
+    document.getElementById("puzzle13").innerHTML = "";
+    document.getElementById("result14").innerHTML = "";
+    document.getElementById("puzzle14").innerHTML = "";
+		document.getElementById("wishes").innerHTML = "Congratulations!! You Solved all the words!";
+    document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+    document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+                document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+                 document.getElementById("coins").hidden = false;
+                 document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+	}
+      }
+      }
+    }).show();    
+  });
+  function ans10()
+    {
+      $("#result9").show();
+      document.getElementById("puzzle9").innerHTML = "";
+    }
+</script>
+
+<div class="sortable-items" id="wrapper10"><!--.sortable-items makes the child elements sortable. It's called in the JS to have the .sortable() function.-->
+  <div id="puzzle10"></div>
+  <div id="result10" style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">STEAL</div>
+  <center><input style='font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;' class = 'button button1' type='button' name='show' id='show11' value='Show Answer' onclick='ans11()'></center><br>
+</div><!-- #wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+
+  
+
+   <script type="text/javascript">
+  // SORTABLE
+  $(function() {
+    var word = ("STEAL");
+    var rand = [];
+    var puzzle = $("#puzzle10").hide();
+    
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function(){return 0.5-Math.random()});
+    
+    //LABEL
+    $.each(jumble,function(index,letter){
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+            
+    puzzle.sortable({
+      items: "section",
+      stop: function(event, ui) {
+
+        var ordered = true;        
+        $(this).find("section").each(function(i, el){
+          ordered = (letters[i] === $(el).html()) ? ordered : false;     
+        }); 
+        if(ordered){
+          $("#result10").show();
+          score++;
+          document.getElementById("scoring").innerHTML = "Your Score is " + score;
+          puzzle.sortable().hide();
+          if(score == 15)
+  {
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("puzzle").innerHTML = "";
+    document.getElementById("result1").innerHTML = "";
+    document.getElementById("puzzle1").innerHTML = "";
+    document.getElementById("result2").innerHTML = "";
+    document.getElementById("puzzle2").innerHTML = "";
+    document.getElementById("result3").innerHTML = "";
+    document.getElementById("puzzle3").innerHTML = "";
+    document.getElementById("result4").innerHTML = "";
+    document.getElementById("puzzle4").innerHTML = "";
+    document.getElementById("result5").innerHTML = "";
+    document.getElementById("puzzle5").innerHTML = "";
+    document.getElementById("result6").innerHTML = "";
+    document.getElementById("puzzle6").innerHTML = "";
+    document.getElementById("result7").innerHTML = "";
+    document.getElementById("puzzle7").innerHTML = "";
+    document.getElementById("result8").innerHTML = "";
+    document.getElementById("puzzle8").innerHTML = "";
+    document.getElementById("result9").innerHTML = "";
+    document.getElementById("puzzle9").innerHTML = "";
+    document.getElementById("result10").innerHTML = "";
+    document.getElementById("puzzle10").innerHTML = "";
+    document.getElementById("result11").innerHTML = "";
+    document.getElementById("puzzle11").innerHTML = "";
+    document.getElementById("result12").innerHTML = "";
+    document.getElementById("puzzle12").innerHTML = "";
+    document.getElementById("result13").innerHTML = "";
+    document.getElementById("puzzle13").innerHTML = "";
+    document.getElementById("result14").innerHTML = "";
+    document.getElementById("puzzle14").innerHTML = "";
+    document.getElementById("wishes").innerHTML = "Congratulations!! You Solved all the words!";
+    document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+    document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+                document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+                 document.getElementById("coins").hidden = false;
+                 document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+  }
+      }
+      }
+    }).show();    
+  });
+  function ans11()
+    {
+      $("#result10").show();
+      document.getElementById("puzzle10").innerHTML = "";
+    }
+</script>
+
+<div class="sortable-items" id="wrapper11"><!--.sortable-items makes the child elements sortable. It's called in the JS to have the .sortable() function.-->
+  <div id="puzzle11"></div>
+  <div id="result11" style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">CAUSE</div>
+  <center><input style='font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;' class = 'button button1' type='button' name='show' id='show12' value='Show Answer' onclick='ans12()'></center><br>
+</div><!-- #wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+
+  
+
+   <script type="text/javascript">
+  // SORTABLE
+  $(function() {
+    var word = ("CAUSE");
+    var rand = [];
+    var puzzle = $("#puzzle11").hide();
+    
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function(){return 0.5-Math.random()});
+    
+    //LABEL
+    $.each(jumble,function(index,letter){
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+            
+    puzzle.sortable({
+      items: "section",
+      stop: function(event, ui) {
+
+        var ordered = true;        
+        $(this).find("section").each(function(i, el){
+          ordered = (letters[i] === $(el).html()) ? ordered : false;     
+        }); 
+        if(ordered){
+          $("#result11").show();
+          score++;
+          document.getElementById("scoring").innerHTML = "Your Score is " + score;
+          puzzle.sortable().hide();
+          if(score == 15)
+  {
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("puzzle").innerHTML = "";
+    document.getElementById("result1").innerHTML = "";
+    document.getElementById("puzzle1").innerHTML = "";
+    document.getElementById("result2").innerHTML = "";
+    document.getElementById("puzzle2").innerHTML = "";
+    document.getElementById("result3").innerHTML = "";
+    document.getElementById("puzzle3").innerHTML = "";
+    document.getElementById("result4").innerHTML = "";
+    document.getElementById("puzzle4").innerHTML = "";
+    document.getElementById("result5").innerHTML = "";
+    document.getElementById("puzzle5").innerHTML = "";
+    document.getElementById("result6").innerHTML = "";
+    document.getElementById("puzzle6").innerHTML = "";
+    document.getElementById("result7").innerHTML = "";
+    document.getElementById("puzzle7").innerHTML = "";
+    document.getElementById("result8").innerHTML = "";
+    document.getElementById("puzzle8").innerHTML = "";
+    document.getElementById("result9").innerHTML = "";
+    document.getElementById("puzzle9").innerHTML = "";
+    document.getElementById("result10").innerHTML = "";
+    document.getElementById("puzzle10").innerHTML = "";
+    document.getElementById("result11").innerHTML = "";
+    document.getElementById("puzzle11").innerHTML = "";
+    document.getElementById("result12").innerHTML = "";
+    document.getElementById("puzzle12").innerHTML = "";
+    document.getElementById("result13").innerHTML = "";
+    document.getElementById("puzzle13").innerHTML = "";
+    document.getElementById("result14").innerHTML = "";
+    document.getElementById("puzzle14").innerHTML = "";
+    document.getElementById("wishes").innerHTML = "Congratulations!! You Solved all the words!";
+    document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+    document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+                document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+                 document.getElementById("coins").hidden = false;
+                 document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+  }
+      }
+      }
+    }).show();    
+  });
+  function ans12()
+    {
+      $("#result11").show();
+      document.getElementById("puzzle11").innerHTML = "";
+    }
+</script>
+
+<div class="sortable-items" id="wrapper12"><!--.sortable-items makes the child elements sortable. It's called in the JS to have the .sortable() function.-->
+  <div id="puzzle12"></div>
+  <div id="result12" style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">EFFECT</div>
+  <center><input style='font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;' class = 'button button1' type='button' name='show' id='show13' value='Show Answer' onclick='ans13()'></center><br>
+</div><!-- #wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+
+  
+
+   <script type="text/javascript">
+  // SORTABLE
+  $(function() {
+    var word = ("EFFECT");
+    var rand = [];
+    var puzzle = $("#puzzle12").hide();
+    
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function(){return 0.5-Math.random()});
+    
+    //LABEL
+    $.each(jumble,function(index,letter){
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+            
+    puzzle.sortable({
+      items: "section",
+      stop: function(event, ui) {
+
+        var ordered = true;        
+        $(this).find("section").each(function(i, el){
+          ordered = (letters[i] === $(el).html()) ? ordered : false;     
+        }); 
+        if(ordered){
+          $("#result12").show();
+          score++;
+          document.getElementById("scoring").innerHTML = "Your Score is " + score;
+          puzzle.sortable().hide();
+          if(score == 15)
+  {
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("puzzle").innerHTML = "";
+    document.getElementById("result1").innerHTML = "";
+    document.getElementById("puzzle1").innerHTML = "";
+    document.getElementById("result2").innerHTML = "";
+    document.getElementById("puzzle2").innerHTML = "";
+    document.getElementById("result3").innerHTML = "";
+    document.getElementById("puzzle3").innerHTML = "";
+    document.getElementById("result4").innerHTML = "";
+    document.getElementById("puzzle4").innerHTML = "";
+    document.getElementById("result5").innerHTML = "";
+    document.getElementById("puzzle5").innerHTML = "";
+    document.getElementById("result6").innerHTML = "";
+    document.getElementById("puzzle6").innerHTML = "";
+    document.getElementById("result7").innerHTML = "";
+    document.getElementById("puzzle7").innerHTML = "";
+    document.getElementById("result8").innerHTML = "";
+    document.getElementById("puzzle8").innerHTML = "";
+    document.getElementById("result9").innerHTML = "";
+    document.getElementById("puzzle9").innerHTML = "";
+    document.getElementById("result10").innerHTML = "";
+    document.getElementById("puzzle10").innerHTML = "";
+    document.getElementById("result11").innerHTML = "";
+    document.getElementById("puzzle11").innerHTML = "";
+    document.getElementById("result12").innerHTML = "";
+    document.getElementById("puzzle12").innerHTML = "";
+    document.getElementById("result13").innerHTML = "";
+    document.getElementById("puzzle13").innerHTML = "";
+    document.getElementById("result14").innerHTML = "";
+    document.getElementById("puzzle14").innerHTML = "";
+    document.getElementById("wishes").innerHTML = "Congratulations!! You Solved all the words!";
+    document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+    document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+                document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+                 document.getElementById("coins").hidden = false;
+                 document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+  }
+      }
+      }
+    }).show();    
+  });
+  function ans13()
+    {
+      $("#result12").show();
+      document.getElementById("puzzle12").innerHTML = "";
+    }
+</script>
+
+<div class="sortable-items" id="wrapper13"><!--.sortable-items makes the child elements sortable. It's called in the JS to have the .sortable() function.-->
+  <div id="puzzle13"></div>
+  <div id="result13" style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">MORALS</div>
+  <center><input style='font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;' class = 'button button1' type='button' name='show' id='show14' value='Show Answer' onclick='ans14()'></center><br>
+</div><!-- #wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+
+  
+
+   <script type="text/javascript">
+  // SORTABLE
+  $(function() {
+    var word = ("MORALS");
+    var rand = [];
+    var puzzle = $("#puzzle13").hide();
+    
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function(){return 0.5-Math.random()});
+    
+    //LABEL
+    $.each(jumble,function(index,letter){
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+            
+    puzzle.sortable({
+      items: "section",
+      stop: function(event, ui) {
+
+        var ordered = true;        
+        $(this).find("section").each(function(i, el){
+          ordered = (letters[i] === $(el).html()) ? ordered : false;     
+        }); 
+        if(ordered){
+          $("#result13").show();
+          score++;
+          document.getElementById("scoring").innerHTML = "Your Score is " + score;
+          puzzle.sortable().hide();
+          if(score == 15)
+  {
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("puzzle").innerHTML = "";
+    document.getElementById("result1").innerHTML = "";
+    document.getElementById("puzzle1").innerHTML = "";
+    document.getElementById("result2").innerHTML = "";
+    document.getElementById("puzzle2").innerHTML = "";
+    document.getElementById("result3").innerHTML = "";
+    document.getElementById("puzzle3").innerHTML = "";
+    document.getElementById("result4").innerHTML = "";
+    document.getElementById("puzzle4").innerHTML = "";
+    document.getElementById("result5").innerHTML = "";
+    document.getElementById("puzzle5").innerHTML = "";
+    document.getElementById("result6").innerHTML = "";
+    document.getElementById("puzzle6").innerHTML = "";
+    document.getElementById("result7").innerHTML = "";
+    document.getElementById("puzzle7").innerHTML = "";
+    document.getElementById("result8").innerHTML = "";
+    document.getElementById("puzzle8").innerHTML = "";
+    document.getElementById("result9").innerHTML = "";
+    document.getElementById("puzzle9").innerHTML = "";
+    document.getElementById("result10").innerHTML = "";
+    document.getElementById("puzzle10").innerHTML = "";
+    document.getElementById("result11").innerHTML = "";
+    document.getElementById("puzzle11").innerHTML = "";
+    document.getElementById("result12").innerHTML = "";
+    document.getElementById("puzzle12").innerHTML = "";
+    document.getElementById("result13").innerHTML = "";
+    document.getElementById("puzzle13").innerHTML = "";
+    document.getElementById("result14").innerHTML = "";
+    document.getElementById("puzzle14").innerHTML = "";
+    document.getElementById("wishes").innerHTML = "Congratulations!! You Solved all the words!";
+    document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+    document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+                document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+                 document.getElementById("coins").hidden = false;
+                 document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+  }
+      }
+      }
+    }).show();    
+  });
+  function ans14()
+    {
+      $("#result13").show();
+      document.getElementById("puzzle13").innerHTML = "";
+    }
+</script>
+
+<div class="sortable-items" id="wrapper14"><!--.sortable-items makes the child elements sortable. It's called in the JS to have the .sortable() function.-->
+  <div id="puzzle14"></div>
+  <div id="result14" style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">CHARACTER</div>
+  <center><input style='font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;' class = 'button button1' type='button' name='show' id='show15' value='Show Answer' onclick='ans15()'></center><br>
+</div><!-- #wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+
+  
+
+   <script type="text/javascript">
+  // SORTABLE
+  $(function() {
+    var word = ("CHARACTER");
+    var rand = [];
+    var puzzle = $("#puzzle14").hide();
+    
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function(){return 0.5-Math.random()});
+    
+    //LABEL
+    $.each(jumble,function(index,letter){
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+            
+    puzzle.sortable({
+      items: "section",
+      stop: function(event, ui) {
+
+        var ordered = true;        
+        $(this).find("section").each(function(i, el){
+          ordered = (letters[i] === $(el).html()) ? ordered : false;     
+        }); 
+        if(ordered){
+          $("#result14").show();
+          score++;
+          document.getElementById("scoring").innerHTML = "Your Score is " + score;
+          puzzle.sortable().hide();
+          if(score == 15)
+  {
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("puzzle").innerHTML = "";
+    document.getElementById("result1").innerHTML = "";
+    document.getElementById("puzzle1").innerHTML = "";
+    document.getElementById("result2").innerHTML = "";
+    document.getElementById("puzzle2").innerHTML = "";
+    document.getElementById("result3").innerHTML = "";
+    document.getElementById("puzzle3").innerHTML = "";
+    document.getElementById("result4").innerHTML = "";
+    document.getElementById("puzzle4").innerHTML = "";
+    document.getElementById("result5").innerHTML = "";
+    document.getElementById("puzzle5").innerHTML = "";
+    document.getElementById("result6").innerHTML = "";
+    document.getElementById("puzzle6").innerHTML = "";
+    document.getElementById("result7").innerHTML = "";
+    document.getElementById("puzzle7").innerHTML = "";
+    document.getElementById("result8").innerHTML = "";
+    document.getElementById("puzzle8").innerHTML = "";
+    document.getElementById("result9").innerHTML = "";
+    document.getElementById("puzzle9").innerHTML = "";
+    document.getElementById("result10").innerHTML = "";
+    document.getElementById("puzzle10").innerHTML = "";
+    document.getElementById("result11").innerHTML = "";
+    document.getElementById("puzzle11").innerHTML = "";
+    document.getElementById("result12").innerHTML = "";
+    document.getElementById("puzzle12").innerHTML = "";
+    document.getElementById("result13").innerHTML = "";
+    document.getElementById("puzzle13").innerHTML = "";
+    document.getElementById("result14").innerHTML = "";
+    document.getElementById("puzzle14").innerHTML = "";
+    document.getElementById("wishes").innerHTML = "Congratulations!! You Solved all the words!";
+    document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+    document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+                document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+                 document.getElementById("coins").hidden = false;
+                 document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+  }
+      }
+      }
+    }).show();    
+  });
+  function ans15()
+    {
+      $("#result14").show();
+      document.getElementById("puzzle14").innerHTML = "";
+    }
+</script>
+</body>
+</html>

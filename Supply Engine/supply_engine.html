@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Supply Engine</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+    body{
+      background-color: #fcf7ff;
+    }
+
+  	.ml14 {
+  font-weight: 200;
+  font-size: 3.2em;
+}
+
+.ml14 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml14 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 100% 100%;
+  bottom: 0;
+}
+
+.ml14 .letter {
+  display: inline-block;
+  line-height: 1em;
+  color: green;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.ml142 {
+  font-weight: 200;
+  font-size: 3.2em;
+}
+
+.ml142 .text-wrapper2 {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml142 .line2 {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 100% 100%;
+  bottom: 0;
+}
+
+.ml142 .letter2 {
+  display: inline-block;
+  line-height: 1em;
+  color: green;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+	.ml143 {
+  font-weight: 200;
+  font-size: 3.2em;
+}
+
+.ml143 .text-wrapper3 {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml143 .line3 {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 100% 100%;
+  bottom: 0;
+}
+
+.ml143 .letter3 {
+  display: inline-block;
+  line-height: 1em;
+  color: green;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+	.ml144 {
+  font-weight: 200;
+  font-size: 3.2em;
+}
+
+.ml144 .text-wrapper4 {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml144 .line4 {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 100% 100%;
+  bottom: 0;
+}
+
+.ml144 .letter4 {
+  display: inline-block;
+  line-height: 1em;
+  color: green;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+	.ml145 {
+  font-weight: 200;
+  font-size: 3.2em;
+}
+
+.ml145 .text-wrapper5 {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml145 .line5 {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 100% 100%;
+  bottom: 0;
+}
+
+.ml145 .letter5 {
+  display: inline-block;
+  line-height: 1em;
+  color: green;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.ml146 {
+  font-weight: 200;
+  font-size: 3.2em;
+}
+
+.ml146 .text-wrapper6 {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml146 .line6 {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 100% 100%;
+  bottom: 0;
+}
+
+.ml146 .letter6 {
+  display: inline-block;
+  line-height: 1em;
+  color: green;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.ml147 {
+  font-weight: 200;
+  font-size: 3.2em;
+}
+
+.ml147 .text-wrapper7 {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml147 .line7 {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 100% 100%;
+  bottom: 0;
+}
+
+.ml147 .letter7 {
+  display: inline-block;
+  line-height: 1em;
+  color: green;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.ml148 {
+  font-weight: 200;
+  font-size: 3.2em;
+}
+
+.ml148 .text-wrapper8 {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml148 .line8 {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 100% 100%;
+  bottom: 0;
+}
+
+.ml148 .letter8 {
+  display: inline-block;
+  line-height: 1em;
+  color: green;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.ml149 {
+  font-weight: 200;
+  font-size: 3.2em;
+}
+
+.ml149 .text-wrapper9 {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml149 .line9 {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 100% 100%;
+  bottom: 0;
+}
+
+.ml149 .letter9 {
+  display: inline-block;
+  line-height: 1em;
+  color: green;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.ml1410 {
+  font-weight: 200;
+  font-size: 3.2em;
+}
+
+.ml1410 .text-wrapper10 {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml1410 .line10 {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 100% 100%;
+  bottom: 0;
+}
+
+.ml1410 .letter10 {
+  display: inline-block;
+  line-height: 1em;
+  color: green;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.ml2 {
+  font-weight: bold;
+  font-size: 35pt;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+  font-size: 35pt;
+}
+
+div.angrytext {
+ font-size:70px;
+ font-weight:bold;
+ color:#4794D3;
+ width:300px;
+ margin:90px auto;
+
+ -webkit-animation: alert 2s linear 0s infinite normal ;
+ animation: alert 2s linear 0s infinite normal ;
+}
+
+@-webkit-keyframes alert {
+  0%{
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  5%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  10%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  15%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  20%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  25%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  30%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  35%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  40%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  45%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  50%{
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+}
+
+@keyframes alert {
+  0%{
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  }
+  5%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  10%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  15%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  20%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  25%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  30%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  35%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  40%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  45%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  50%{
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  }
+}
+
+div.angrytime {
+ -webkit-animation: alert 2s linear 0s infinite normal ;
+ animation: alert 2s linear 0s infinite normal ;
+}
+
+@-webkit-keyframes alert {
+  0%{
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  5%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  10%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  15%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  20%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  25%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  30%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  35%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  40%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  45%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  50%{
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+}
+
+@keyframes alert {
+  0%{
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  }
+  5%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  10%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  15%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  20%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  25%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  30%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  35%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  40%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  45%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  50%{
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  }
+}
+  </style>
+
+  <script type="text/javascript">
+  function timeout()
+      {
+        //var minute=Math.floor((timeLeft-(hours*60*60))/60);
+        var minute=Math.floor(timeLeft/60);
+        var second=timeLeft%60;
+        //var hrs=checktime(hours);
+        var mint=checktime(minute);
+        var sec=checktime(second);
+        if(timeLeft<0)
+        {
+            clearTimeout(tm);
+            document.getElementById("s1").disabled = true;
+            check();
+            document.getElementById("coins").hidden = false;
+            document.getElementById("my_audio").pause();
+            document.getElementById("my_end").play();
+            delay(5000);
+            document.getElementById("my_end").pause();
+            document.getElementById("drop").play();
+        }
+        else
+        {
+            document.getElementById("time").innerHTML=mint+":"+sec;
+        }
+        timeLeft--;
+        var tm=setTimeout(function(){timeout()},1000);
+      }
+      function checktime(msg)
+      {
+        if(msg<10)
+        {
+            msg="0"+msg;
+        }
+        return msg;
+      }
+</script>
+
+  <script type="text/javascript">
+  	function check()
+  	{
+  		document.getElementById("a11").disabled = true;
+		document.getElementById("a12").disabled = true;
+		document.getElementById("a21").disabled = true;
+		document.getElementById("a22").disabled = true;
+		document.getElementById("a31").disabled = true;
+		document.getElementById("a32").disabled = true;
+		document.getElementById("a41").disabled = true;
+		document.getElementById("a42").disabled = true;
+		document.getElementById("a51").disabled = true;
+		document.getElementById("a52").disabled = true;
+		document.getElementById("a61").disabled = true;
+		document.getElementById("a62").disabled = true;
+		document.getElementById("a71").disabled = true;
+		document.getElementById("a72").disabled = true;
+		document.getElementById("a81").disabled = true;
+		document.getElementById("a82").disabled = true;
+		document.getElementById("a91").disabled = true;
+		document.getElementById("a92").disabled = true;
+    document.getElementById("a101").disabled = true;
+    document.getElementById("a102").disabled = true;
+		document.getElementById("s1").disabled = true;
+  		var q1 = document.myform.q1.value;
+		var q2 = document.myform.q2.value;
+		var q3 = document.myform.q3.value;
+		var q4 = document.myform.q4.value;
+		var q5 = document.myform.q5.value;
+		var q6 = document.myform.q6.value;
+		var q7 = document.myform.q7.value;
+		var q8 = document.myform.q8.value;
+		var q9 = document.myform.q9.value;
+    var q10 = document.myform.q10.value;
+		var score=0;
+  		if(q1 == "a")
+  		{
+  			score++;
+			document.getElementById("scoring").innerHTML = "Your Score is " + score;
+			document.getElementById("ans1").innerHTML = "Correct";
+			// Wrap every letter in a span
+			$('.ml14 .letters').each(function(){
+  			$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+			});
+
+			anime.timeline({loop: true})
+  			.add({
+    		targets: '.ml14 .line',
+    		scaleX: [0,1],
+    		opacity: [0.5,1],
+    		easing: "easeInOutExpo",
+    		duration: 900
+  			}).add({
+    		targets: '.ml14 .letter',
+    		opacity: [0,1],
+    		translateX: [40,0],
+    		translateZ: 0,
+    		scaleX: [0.3, 1],
+    		easing: "easeOutExpo",
+    		duration: 800,
+    		offset: '-=600',
+    		delay: function(el, i) {
+      		return 150 + 25 * i;
+    		}
+  			}).add({
+   		 	targets: '.ml14',
+    		opacity: 0,
+    		duration: 1000,
+    		easing: "easeOutExpo",
+    		delay: 1000
+  			});
+  		}
+  		else
+  		{
+  			var str = "<h6 style='font-size: 12pt; font-weight: bold; font-family: Comic Sans MS, Comic Sans, cursive;'>Oops! The answer is You admit it was your mistake.</h6>";
+			var res = str.fontcolor("red");
+			document.getElementById("ans1").innerHTML = res;
+  		}
+
+  		if(q2 == "b")
+  		{
+  			score++;
+			document.getElementById("scoring").innerHTML = "Your Score is " + score;
+			document.getElementById("ans2").innerHTML = "Correct";
+			// Wrap every letter in a span
+			$('.ml142 .letters2').each(function(){
+  			$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter2'>$&</span>"));
+			});
+
+			anime.timeline({loop: true})
+  			.add({
+    		targets: '.ml142 .line2',
+    		scaleX: [0,1],
+    		opacity: [0.5,1],
+    		easing: "easeInOutExpo",
+    		duration: 900
+  			}).add({
+    		targets: '.ml142 .letter2',
+    		opacity: [0,1],
+    		translateX: [40,0],
+    		translateZ: 0,
+    		scaleX: [0.3, 1],
+    		easing: "easeOutExpo",
+    		duration: 800,
+    		offset: '-=600',
+    		delay: function(el, i) {
+      		return 150 + 25 * i;
+    		}
+  			}).add({
+   		 	targets: '.ml142',
+    		opacity: 0,
+    		duration: 1000,
+    		easing: "easeOutExpo",
+    		delay: 1000
+  			});
+  		}
+  		else
+  		{
+  			var str = "<h6 style='font-size: 12pt; font-weight: bold; font-family: Comic Sans MS, Comic Sans, cursive;'>Oops! The answer is No. you should ask to borrow the toy instead.</h6>";
+			var res = str.fontcolor("red");
+			document.getElementById("ans2").innerHTML = res;
+  		}
+
+  		if(q3 == "b")
+  		{
+  			score++;
+			document.getElementById("scoring").innerHTML = "Your Score is " + score;
+			document.getElementById("ans3").innerHTML = "Correct";
+			// Wrap every letter in a span
+			$('.ml143 .letters3').each(function(){
+  			$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter3'>$&</span>"));
+			});
+
+			anime.timeline({loop: true})
+  			.add({
+    		targets: '.ml143 .line3',
+    		scaleX: [0,1],
+    		opacity: [0.5,1],
+    		easing: "easeInOutExpo",
+    		duration: 900
+  			}).add({
+    		targets: '.ml143 .letter3',
+    		opacity: [0,1],
+    		translateX: [40,0],
+    		translateZ: 0,
+    		scaleX: [0.3, 1],
+    		easing: "easeOutExpo",
+    		duration: 800,
+    		offset: '-=600',
+    		delay: function(el, i) {
+      		return 150 + 25 * i;
+    		}
+  			}).add({
+   		 	targets: '.ml143',
+    		opacity: 0,
+    		duration: 1000,
+    		easing: "easeOutExpo",
+    		delay: 1000
+  			});
+  		}
+  		else
+  		{
+  			var str = "<h6 style='font-size: 12pt; font-weight: bold; font-family: Comic Sans MS, Comic Sans, cursive;'>Oops! The answer is Being a part of it, I will be cheating too. No matter what she thinks I will not help her in the exam.</h6>";
+			var res = str.fontcolor("red");
+			document.getElementById("ans3").innerHTML = res;
+  		}
+
+  		if(q4 == "b")
+  		{
+  			score++;
+			document.getElementById("scoring").innerHTML = "Your Score is " + score;
+			document.getElementById("ans4").innerHTML = "Correct";
+			// Wrap every letter in a span
+			$('.ml144 .letters4').each(function(){
+  			$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter4'>$&</span>"));
+			});
+
+			anime.timeline({loop: true})
+  			.add({
+    		targets: '.ml144 .line4',
+    		scaleX: [0,1],
+    		opacity: [0.5,1],
+    		easing: "easeInOutExpo",
+    		duration: 900
+  			}).add({
+    		targets: '.ml144 .letter4',
+    		opacity: [0,1],
+    		translateX: [40,0],
+    		translateZ: 0,
+    		scaleX: [0.3, 1],
+    		easing: "easeOutExpo",
+    		duration: 800,
+    		offset: '-=600',
+    		delay: function(el, i) {
+      		return 150 + 25 * i;
+    		}
+  			}).add({
+   		 	targets: '.ml144',
+    		opacity: 0,
+    		duration: 1000,
+    		easing: "easeOutExpo",
+    		delay: 1000
+  			});
+  		}
+  		else
+  		{
+  			var str = "<h6 style='font-size: 12pt; font-weight: bold; font-family: Comic Sans MS, Comic Sans, cursive;'>Oops! The answer is Tell your sister that you won’t lie and keep such secrets from parents.</h6>";
+			var res = str.fontcolor("red");
+			document.getElementById("ans4").innerHTML = res;
+  		}
+
+  		if(q5 == "a")
+  		{
+  			score++;
+			document.getElementById("scoring").innerHTML = "Your Score is " + score;
+			document.getElementById("ans5").innerHTML = "Correct";
+			// Wrap every letter in a span
+			$('.ml145 .letters5').each(function(){
+  			$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter5'>$&</span>"));
+			});
+
+			anime.timeline({loop: true})
+  			.add({
+    		targets: '.ml145 .line5',
+    		scaleX: [0,1],
+    		opacity: [0.5,1],
+    		easing: "easeInOutExpo",
+    		duration: 900
+  			}).add({
+    		targets: '.ml145 .letter5',
+    		opacity: [0,1],
+    		translateX: [40,0],
+    		translateZ: 0,
+    		scaleX: [0.3, 1],
+    		easing: "easeOutExpo",
+    		duration: 800,
+    		offset: '-=600',
+    		delay: function(el, i) {
+      		return 150 + 25 * i;
+    		}
+  			}).add({
+   		 	targets: '.ml145',
+    		opacity: 0,
+    		duration: 1000,
+    		easing: "easeOutExpo",
+    		delay: 1000
+  			});
+  		}
+  		else
+  		{
+  			var str = "<h6 style='font-size: 12pt; font-weight: bold; font-family: Comic Sans MS, Comic Sans, cursive;'>Oops! The answer is Telling them that I don’t feel like going and asking if I can get an off today.</h6>";
+			var res = str.fontcolor("red");
+			document.getElementById("ans5").innerHTML = res;
+  		}
+
+  		if(q6 == "b")
+  		{
+  			score++;
+			document.getElementById("scoring").innerHTML = "Your Score is " + score;
+			document.getElementById("ans6").innerHTML = "Correct";
+			// Wrap every letter in a span
+			$('.ml146 .letters6').each(function(){
+  			$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter6'>$&</span>"));
+			});
+
+			anime.timeline({loop: true})
+  			.add({
+    		targets: '.ml146 .line6',
+    		scaleX: [0,1],
+    		opacity: [0.5,1],
+    		easing: "easeInOutExpo",
+    		duration: 900
+  			}).add({
+    		targets: '.ml146 .letter6',
+    		opacity: [0,1],
+    		translateX: [40,0],
+    		translateZ: 0,
+    		scaleX: [0.3, 1],
+    		easing: "easeOutExpo",
+    		duration: 800,
+    		offset: '-=600',
+    		delay: function(el, i) {
+      		return 150 + 25 * i;
+    		}
+  			}).add({
+   		 	targets: '.ml146',
+    		opacity: 0,
+    		duration: 1000,
+    		easing: "easeOutExpo",
+    		delay: 1000
+  			});
+  		}
+  		else
+  		{
+  			var str = "<h6 style='font-size: 12pt; font-weight: bold; font-family: Comic Sans MS, Comic Sans, cursive;'>Oops! The answer is Apologise and promise them that this will not be repeated.</h6>";
+			var res = str.fontcolor("red");
+			document.getElementById("ans6").innerHTML = res;
+  		}
+
+  		if(q7 == "a")
+  		{
+  			score++;
+			document.getElementById("scoring").innerHTML = "Your Score is " + score;
+			document.getElementById("ans7").innerHTML = "Correct";
+			// Wrap every letter in a span
+			$('.ml147 .letters7').each(function(){
+  			$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter7'>$&</span>"));
+			});
+
+			anime.timeline({loop: true})
+  			.add({
+    		targets: '.ml147 .line7',
+    		scaleX: [0,1],
+    		opacity: [0.5,1],
+    		easing: "easeInOutExpo",
+    		duration: 900
+  			}).add({
+    		targets: '.ml147 .letter7',
+    		opacity: [0,1],
+    		translateX: [40,0],
+    		translateZ: 0,
+    		scaleX: [0.3, 1],
+    		easing: "easeOutExpo",
+    		duration: 800,
+    		offset: '-=600',
+    		delay: function(el, i) {
+      		return 150 + 25 * i;
+    		}
+  			}).add({
+   		 	targets: '.ml147',
+    		opacity: 0,
+    		duration: 1000,
+    		easing: "easeOutExpo",
+    		delay: 1000
+  			});
+  		}
+  		else
+  		{
+  			var str = "<h6 style='font-size: 12pt; font-weight: bold; font-family: Comic Sans MS, Comic Sans, cursive;'>Oops! The answer is You try to investigate the truth in the gossip.</h6>";
+			var res = str.fontcolor("red");
+			document.getElementById("ans7").innerHTML = res;
+  		}
+
+  		if(q8 == "b")
+  		{
+  			score++;
+			document.getElementById("scoring").innerHTML = "Your Score is " + score;
+			document.getElementById("ans8").innerHTML = "Correct";
+			// Wrap every letter in a span
+			$('.ml148 .letters8').each(function(){
+  			$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter8'>$&</span>"));
+			});
+
+			anime.timeline({loop: true})
+  			.add({
+    		targets: '.ml148 .line8',
+    		scaleX: [0,1],
+    		opacity: [0.5,1],
+    		easing: "easeInOutExpo",
+    		duration: 900
+  			}).add({
+    		targets: '.ml148 .letter8',
+    		opacity: [0,1],
+    		translateX: [40,0],
+    		translateZ: 0,
+    		scaleX: [0.3, 1],
+    		easing: "easeOutExpo",
+    		duration: 800,
+    		offset: '-=600',
+    		delay: function(el, i) {
+      		return 150 + 25 * i;
+    		}
+  			}).add({
+   		 	targets: '.ml148',
+    		opacity: 0,
+    		duration: 1000,
+    		easing: "easeOutExpo",
+    		delay: 1000
+  			});
+  		}
+  		else
+  		{
+  			var str = "<h6 style='font-size: 12pt; font-weight: bold; font-family: Comic Sans MS, Comic Sans, cursive;'>Oops! The answer is Apologise and return it back the following day as it’s his.</h6>";
+			var res = str.fontcolor("red");
+			document.getElementById("ans8").innerHTML = res;
+  		}
+
+  		if(q9 == "a")
+  		{
+  			score++;
+			document.getElementById("scoring").innerHTML = "Your Score is " + score;
+			document.getElementById("ans9").innerHTML = "Correct";
+			// Wrap every letter in a span
+			$('.ml149 .letters9').each(function(){
+  			$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter9'>$&</span>"));
+			});
+
+			anime.timeline({loop: true})
+  			.add({
+    		targets: '.ml149 .line9',
+    		scaleX: [0,1],
+    		opacity: [0.5,1],
+    		easing: "easeInOutExpo",
+    		duration: 900
+  			}).add({
+    		targets: '.ml149 .letter9',
+    		opacity: [0,1],
+    		translateX: [40,0],
+    		translateZ: 0,
+    		scaleX: [0.3, 1],
+    		easing: "easeOutExpo",
+    		duration: 800,
+    		offset: '-=600',
+    		delay: function(el, i) {
+      		return 150 + 25 * i;
+    		}
+  			}).add({
+   		 	targets: '.ml149',
+    		opacity: 0,
+    		duration: 1000,
+    		easing: "easeOutExpo",
+    		delay: 1000
+  			});
+  		}
+  		else
+  		{
+  			var str = "<h6 style='font-size: 12pt; font-weight: bold; font-family: Comic Sans MS, Comic Sans, cursive;'>Oops! The answer is Hand it to the class teacher.</h6>";
+			var res = str.fontcolor("red");
+			document.getElementById("ans9").innerHTML = res;
+  		}
+
+      if(q10 == "b")
+      {
+        score++;
+      document.getElementById("scoring").innerHTML = "Your Score is " + score;
+      document.getElementById("ans10").innerHTML = "Correct";
+      // Wrap every letter in a span
+      $('.ml1410 .letters10').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter10'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml1410 .line10',
+        scaleX: [0,1],
+        opacity: [0.5,1],
+        easing: "easeInOutExpo",
+        duration: 900
+        }).add({
+        targets: '.ml1410 .letter10',
+        opacity: [0,1],
+        translateX: [40,0],
+        translateZ: 0,
+        scaleX: [0.3, 1],
+        easing: "easeOutExpo",
+        duration: 800,
+        offset: '-=600',
+        delay: function(el, i) {
+          return 150 + 25 * i;
+        }
+        }).add({
+        targets: '.ml1410',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+      }
+      else
+      {
+        var str = "<h6 style='font-size: 12pt; font-weight: bold; font-family: Comic Sans MS, Comic Sans, cursive;'>Oops! The answer is Admit I am late and assure that it won’t happen next time.</h6>";
+      var res = str.fontcolor("red");
+      document.getElementById("ans10").innerHTML = res;
+      }
+
+  	  document.getElementById("totscore").innerHTML = "Total correct answer " + score;
+      document.getElementById("totcoins").innerHTML = "Total coins achieved " + score;
+      document.getElementById("coins").hidden = false;
+      document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+      if (score == 10) {
+            document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+          }
+  	}
+  </script>
+</head>
+<body>
+  <audio src="Fast-clock-ticking-sound-effect.mp3" id="my_audio" loop="loop"></audio>
+  <audio src="Train Horn Low-SoundBible.com-1744689113.mp3" id="my_end"></audio>
+  <audio src="coindrop.mp3" id="drop" loop="loop"></audio>
+  <script type="text/javascript">
+    window.onload=function(){
+      document.getElementById("time").innerHTML = timeout();
+      var aud = document.getElementById("my_audio").play();
+    }
+  </script>
+	<div class="d-flex justify-content-center bg-secondary mb-3">
+<img src="Logo.png" width="700px" height="700px" style="position: fixed; margin: 0; z-index: -1; opacity: 0.05">
+</div>
+<br>
+<script type="text/javascript">
+        var timeLeft=5*60;
+    </script>
+    <div class='container angrytext' style="margin-right: -55%; margin-top: -10px; position: absolute; z-index: -1"><img src="clock.png" width="150px" height="150px"></div>
+    <h3><div class="container angrytime" id="time" style="margin-top: 30px; margin-left: 45px; float: left; font-size: 18pt">Timeout</div></h3><br>
+  <h3 id="scoring" style="font-size: 18pt ; font-family: Comic Sans MS, Comic Sans, cursive; color: #BA55D3; float: right;">Your Score is 0</h3><br><br><br>
+  <center><h2 id="totscore" style="font-family: Comic Sans MS, Comic Sans, cursive; font-weight: bold; color: #BA55D3"></h2></center>
+  <center><h2 id="totcoins" style="font-family: Comic Sans MS, Comic Sans, cursive; font-weight: bold; color: #BA55D3"></h2></center>
+  <center><img src="coins.gif" id="coins" hidden="true" width="200px" height="200px"></center>
+	<br><br>
+	<h4 class="ml2" id="congrats" style="text-align: center; font-family: Comic Sans MS, Comic Sans, cursive;"></h4><br>
+  <div class="container" align="center">
+    <img src="party1.gif" id="part1" hidden="true" width="300px" height="400px">
+    <img src="good job.gif" id="goodjob" hidden="true" width="300px" height="400px">
+    <img src="party1.gif" id="part2" hidden="true" width="300px" height="400px">
+  </div>
+	<form name="myform">
+	<div class="container">
+		<table class="table table-bordered table-hover table-condensed" id="tablecreation">
+			<thead>
+      <tr style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">
+        <th><h3 style="text-align: center ; color: #BA55D3">S.No.</h3></th>
+        <th><h3 style="text-align: center ; color: #BA55D3">Situation</h3></th>
+        <th><h3 style="text-align: center ; color: #BA55D3">Response</h3></th>
+        <th><h3 style="text-align: center ; color: #BA55D3">Response</h3></th>
+      </tr>
+    </thead>
+    <tbody>
+    	<tr style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">
+        <td><h4 style="text-align: center;">1.</h4>
+    		<td><h4 style="text-align: center;">You broke a glass. Your mom asks who did it.</h4>
+    		<h6 class="ml14">
+  			<span class="text-wrapper">
+    		<span class="letters" id="ans1" style="font-family: Comic Sans MS, Comic Sans, cursive;"></span>
+    		<span class="line"></span>
+  			</span>
+			</h6>
+    		</td>
+    		<td align="center"><input type="radio" name="q1" id="a11" value="a"><br>You admit it was your mistake.</td>
+    		<td align="center"><input type="radio" name="q1" id="a12" value="b"><br>You say you don’t know what happened.</td>
+    	</tr>
+    	<tr style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">
+        <td><h4 style="text-align: center;">2.</h4>
+    		<td><h4 style="text-align: center;">You playing with a friend. You loved one of the toy she has. You decide that you will slip the toy in your bag and return it tomorrow and she would not even know. Is this the correct thing to do?</h4>
+    		<h6 class="ml142">
+  			<span class="text-wrapper2">
+    		<span class="letters2" id="ans2" style="font-family: Comic Sans MS, Comic Sans, cursive;"></span>
+    		<span class="line2"></span>
+  			</span>
+			</h6>
+    		</td>
+    		<td align="center"><input type="radio" name="q2" id="a21" value="a"><br>Yes, Because you are not lying.</td>
+    		<td align="center"><input type="radio" name="q2" id="a22" value="b"><br>No. you should ask to borrow the toy instead.</td>
+    	</tr>
+    	<tr style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">
+        <td><h4 style="text-align: center;">3.</h4>
+    		<td><h4 style="text-align: center;">It’s an exam test at school. Your friend Sheila is not well prepared. She asks you the answer for the test question. What would you do?</h4>
+    		<h6 class="ml143">
+  			<span class="text-wrapper3">
+    		<span class="letters3" id="ans3" style="font-family: Comic Sans MS, Comic Sans, cursive;"></span>
+    		<span class="line3"></span>
+  			</span>
+			</h6>
+    		</td>
+    		<td align="center"><input type="radio" name="q3" id="a31" value="a"><br>I don’t want to lose Sheila as my friend so I would give in and give my answer sheet to her.</td>
+    		<td align="center"><input type="radio" name="q3" id="a32" value="b"><br>Being a part of it, I will be cheating too. No matter what she thinks I will not help her in the exam.</td>
+    	</tr>
+    	<tr style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">
+        <td><h4 style="text-align: center;">4.</h4>
+    		<td><h4 style="text-align: center;">Your sister has gone to a party at her friends place. She has asked you to keep this as a secret and not share this with your parents. What would you do?</h4>
+    		<h6 class="ml144">
+  			<span class="text-wrapper4">
+    		<span class="letters4" id="ans4" style="font-family: Comic Sans MS, Comic Sans, cursive;"></span>
+    		<span class="line4"></span>
+  			</span>
+			</h6>
+    		</td>
+    		<td align="center"><input type="radio" name="q4" id="a41" value="a"><br>Do as you sister told you. And if your parents asks questions later on, cover it with a lie.</td>
+    		<td align="center"><input type="radio" name="q4" id="a42" value="b"><br>Tell your sister that you won’t lie and keep such secrets from parents.</td>
+    	</tr>
+    	<tr style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">
+    		<td><h4 style="text-align: center;">5.</h4>
+        <td><h4 style="text-align: center;">You don’t feel like going to go to school today. How would you convince you parents for it?</h4>
+    		<h6 class="ml145">
+  			<span class="text-wrapper5">
+    		<span class="letters5" id="ans5" style="font-family: Comic Sans MS, Comic Sans, cursive;"></span>
+    		<span class="line5"></span>
+  			</span>
+			</h6>
+    		</td>
+    		<td align="center"><input type="radio" name="q5" id="a51" value="a"><br>Telling them that I don’t feel like going and asking if I can get an off today.</td>
+    		<td align="center"><input type="radio" name="q5" id="a52" value="b"><br>Telling them that I have a stomach ache and I can’t go today.</td>
+    	</tr>
+    	<tr style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">
+        <td><h4 style="text-align: center;">6.</h4>
+    		<td><h4 style="text-align: center;">You have had extra sweets today. Last time when you did that, your parent’s scolded you. So to be on a safer side</h4>
+    		<h6 class="ml146">
+  			<span class="text-wrapper6">
+    		<span class="letters6" id="ans6" style="font-family: Comic Sans MS, Comic Sans, cursive;"></span>
+    		<span class="line6"></span>
+  			</span>
+			</h6>
+    		</td>
+    		<td align="center"><input type="radio" name="q6" id="a61" value="a"><br>You don’t tell them how many sweets you had.</td>
+    		<td align="center"><input type="radio" name="q6" id="a62" value="b"><br>Apologise and promise them that this will not be repeated.</td>
+    	</tr>
+    	<tr style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">
+        <td><h4 style="text-align: center;">7.</h4>
+    		<td><h4 style="text-align: center;">You got to hear a mean gossip about your friend.</h4>
+    		<h6 class="ml147">
+  			<span class="text-wrapper7">
+    		<span class="letters7" id="ans7" style="font-family: Comic Sans MS, Comic Sans, cursive;"></span>
+    		<span class="line7"></span>
+  			</span>
+			</h6>
+    		</td>
+    		<td align="center"><input type="radio" name="q7" id="a71" value="a"><br>You try to investigate the truth in the gossip</td>
+    		<td align="center"><input type="radio" name="q7" id="a72" value="b"><br>You pass the same gossip ahead.</td>
+    	</tr>
+    	<tr style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">
+        <td><h4 style="text-align: center;">8.</h4>
+    		<td><h4 style="text-align: center;">I borrowed a pencil from a friend and forgot to return at the end of class.</h4>
+    		<h6 class="ml148">
+  			<span class="text-wrapper8">
+    		<span class="letters8" id="ans8" style="font-family: Comic Sans MS, Comic Sans, cursive;"></span>
+    		<span class="line8"></span>
+  			</span>
+			</h6>
+    		</td>
+    		<td align="center"><input type="radio" name="q8" id="a81" value="a"><br>I might as well keep it with me as he doesn’t remember it</td>
+    		<td align="center"><input type="radio" name="q8" id="a82" value="b"><br>Apologise and return it back the following day as it’s his.</td>
+    	</tr>
+    	<tr style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">
+        <td><h4 style="text-align: center;">9.</h4>
+    		<td><h4 style="text-align: center;">I accidentally found a coin on the floor of the classroom in the lunch break</h4>
+    		<h6 class="ml149">
+  			<span class="text-wrapper9">
+    		<span class="letters9" id="ans9" style="font-family: Comic Sans MS, Comic Sans, cursive;"></span>
+    		<span class="line9"></span>
+  			</span>
+			</h6>
+    		</td>
+    		<td align="center"><input type="radio" name="q9" id="a91" value="a"><br>Hand it to the class teacher.</td>
+    		<td align="center"><input type="radio" name="q9" id="a92" value="b"><br>Keep it with me as no one else noticed it. So it now belongs to me.</td>
+    	</tr>
+      <tr style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;">
+        <td><h4 style="text-align: center;">10.</h4>
+        <td><h4 style="text-align: center;">I was late for my dance classes since I woke up late.</h4>
+        <h6 class="ml1410">
+        <span class="text-wrapper10">
+        <span class="letters10" id="ans10" style="font-family: Comic Sans MS, Comic Sans, cursive;"></span>
+        <span class="line10"></span>
+        </span>
+      </h6>
+        </td>
+        <td align="center"><input type="radio" name="q10" id="a101" value="a"><br>Lie and come up with some excuse to cover me up.</td>
+        <td align="center"><input type="radio" name="q10" id="a102" value="b"><br>Admit I am late and assure that it won’t happen next time.</td>
+      </tr>
+    </tbody>
+</table>
+<input style="font-size: 13.5pt ; font-family: Comic Sans MS, Comic Sans, cursive;" type="button" name="submit" value="Submit" id="s1" onclick="check()" class="btn btn-dark m-auto d-block">
+</div>
+</form>
+</body>
+</html>

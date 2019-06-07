@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Untold Story</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+     <link rel="stylesheet" type="text/css" href="bootstrap.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    var score = 0;
+  function timeout()
+      {
+        //var minute=Math.floor((timeLeft-(hours*60*60))/60);
+        var minute=Math.floor(timeLeft/60);
+        var second=timeLeft%60;
+        //var hrs=checktime(hours);
+        var mint=checktime(minute);
+        var sec=checktime(second);
+        if(timeLeft<0)
+        {
+            clearTimeout(tm);
+            document.getElementById("con").innerHTML = "";
+            document.getElementById("left").innerHTML = "";
+            var story = '<h3 style="text-align: justify; font-family: Comic Sans MS, Comic Sans, cursive; line-height: 45pt">An aging King realized that if he died he has no one to take over the throne. He decided to adopt a son. He launched a competition and 10 boys made it to the top. The King said to them, “I have one last test and whoever comes top will become my adopted son and heir to my throne”. He gave each boy a seed of corn and told them to take the seed home, plant and nurture it for 3 weeks. The 10 boys took their seeds and ran home to plant their seeds. In one home, the boy and his parents were sad when the seed failed to sprout. The boy had done everything but he failed. His friends advised him to buy a seed and plant it but his God fearing parents who had always taught him honesty refused. The day came and the 10 boys went to the palace. All the 9 boys were successful.The King went to each boy asking – “Is that what came out of the seed I gave you?” And each boy said “Yes, your majesty”. The King would nod and move down the line until the last boy in the line who was shaking with fear. The King asked him – “What did you do with the seed I gave you?” The boy said “I planted it and cared for it your majesty but it failed to sprout.” The King went to the throne with the boy and said, “I gave these boys boiled seeds and a boiled seed cannot sprout. If a King must have one quality, it must be honesty and only this boy passed the test.”</h3>';
+            document.getElementById("con").innerHTML = story;
+            document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+            document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+            document.getElementById("coins").hidden = false;
+            document.getElementById("drop").play();
+            document.getElementById("my_audio").pause();
+            document.getElementById("my_end").play();
+            delay(5000);
+            document.getElementById("my_end").pause();
+        }
+        else
+        {
+            document.getElementById("time").innerHTML=mint+":"+sec;
+        }
+        timeLeft--;
+        var tm=setTimeout(function(){timeout()},1000);
+      }
+      function checktime(msg)
+      {
+        if(msg<10)
+        {
+            msg="0"+msg;
+        }
+        return msg;
+        }
+        
+</script>
+
+  <style type="text/css">
+body{
+  background-color: #fcf7ff;
+}
+#response1 {
+    position: absolute;
+  width: 180px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response2 {
+    position: absolute;
+  width: 180px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response3 {
+    position: absolute;
+  width: 180px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response4 {
+    position: absolute;
+  width: 180px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response5 {
+    position: absolute;
+  width: 900px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response6 {
+    position: absolute;
+  width: 180px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response7 {
+    position: absolute;
+  width: 180px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response8 {
+    position: absolute;
+  width: 180px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response9 {
+    position: absolute;
+  width: 180px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response10 {
+    position: absolute;
+  width: 180px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response11 {
+    position: absolute;
+  width: 180px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response12 {
+    position: absolute;
+  width: 180px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response13 {
+    position: absolute;
+  width: 180px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response14 {
+    position: absolute;
+  width: 180px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response15 {
+    position: absolute;
+  width: 180px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response16 {
+    position: absolute;
+  width: 600px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response17 {
+    position: absolute;
+  width: 300px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response18 {
+    position: absolute;
+  width: 600px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response19 {
+    position: absolute;
+  width: 700px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#response20 {
+    position: absolute;
+  width: 180px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+    #left{
+  float:left;
+  width:170px;
+  height: 500px;
+  position: fixed;
+  overflow: scroll;
+}
+
+.ml2 {
+  font-weight: bold;
+  font-size: 35pt;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+  font-size: 35pt;
+}
+
+div.angrytext {
+ font-size:70px;
+ font-weight:bold;
+ color:#4794D3;
+ width:300px;
+ margin:90px auto;
+
+ -webkit-animation: alert 2s linear 0s infinite normal ;
+ animation: alert 2s linear 0s infinite normal ;
+}
+
+@-webkit-keyframes alert {
+  0%{
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  5%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  10%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  15%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  20%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  25%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  30%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  35%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  40%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  45%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  50%{
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+}
+
+@keyframes alert {
+  0%{
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  }
+  5%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  10%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  15%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  20%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  25%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  30%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  35%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  40%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  45%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  50%{
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  }
+}
+
+div.angrytime {
+ -webkit-animation: alert 2s linear 0s infinite normal ;
+ animation: alert 2s linear 0s infinite normal ;
+}
+
+@-webkit-keyframes alert {
+  0%{
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  5%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  10%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  15%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  20%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  25%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  30%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  35%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  40%{
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  45%{
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  50%{
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+}
+
+@keyframes alert {
+  0%{
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  }
+  5%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  10%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  15%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  20%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  25%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  30%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  35%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  40%{
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  }
+  45%{
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  }
+  50%{
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  }
+  }
+  </style>
+
+  <script>
+    
+function allowDrop(ev) {
+  
+
+if(document.getElementById("boxA").value == document.getElementById("response1").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi";
+  }
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxA').ondragstart = function () { return false; };
+}
+
+function allowDrop2(ev2) {
+
+if(document.getElementById("boxB").value == document.getElementById("response2").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev2.preventDefault(); 
+}
+
+function drag2(ev2) {
+  ev2.dataTransfer.setData("text2", ev2.target.id);
+}
+
+function drop2(ev2) {
+  ev2.preventDefault();
+  var data2 = ev2.dataTransfer.getData("text2");
+  ev2.target.appendChild(document.getElementById(data2));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxB').ondragstart = function () { return false; };
+}
+
+function allowDrop3(ev3) {
+if(document.getElementById("boxC").value == document.getElementById("response3").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev3.preventDefault();
+}
+
+function drag3(ev3) {
+  ev3.dataTransfer.setData("text3", ev3.target.id);
+}
+
+function drop3(ev3) {
+  ev3.preventDefault();
+  var data3 = ev3.dataTransfer.getData("text3");
+  ev3.target.appendChild(document.getElementById(data3));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxC').ondragstart = function () { return false; };
+}
+
+function allowDrop4(ev4) {
+if(document.getElementById("boxD").value == document.getElementById("response4").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev4.preventDefault();
+}
+
+function drag4(ev4) {
+  ev4.dataTransfer.setData("text4", ev4.target.id);
+}
+
+function drop4(ev4) {
+  ev4.preventDefault();
+  var data4 = ev4.dataTransfer.getData("text4");
+  ev4.target.appendChild(document.getElementById(data4));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxD').ondragstart = function () { return false; };
+}
+
+function allowDrop5(ev5) {
+if(document.getElementById("boxE").value == document.getElementById("response5").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev5.preventDefault();
+}
+
+function drag5(ev5) {
+  ev5.dataTransfer.setData("text5", ev5.target.id);
+}
+
+function drop5(ev5) {
+  ev5.preventDefault();
+  var data5 = ev5.dataTransfer.getData("text5");
+  ev5.target.appendChild(document.getElementById(data5));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxE').ondragstart = function () { return false; };
+}
+
+function allowDrop6(ev6) {
+if(document.getElementById("boxF").value == document.getElementById("response6").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev6.preventDefault();
+}
+
+function drag6(ev6) {
+  ev6.dataTransfer.setData("text6", ev6.target.id);
+}
+
+function drop6(ev6) {
+  ev6.preventDefault();
+  var data6 = ev6.dataTransfer.getData("text6");
+  ev6.target.appendChild(document.getElementById(data6));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxF').ondragstart = function () { return false; };
+}
+
+function allowDrop7(ev7) {
+if(document.getElementById("boxG").value == document.getElementById("response7").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev7.preventDefault();
+}
+
+function drag7(ev7) {
+  ev7.dataTransfer.setData("text7", ev7.target.id);
+}
+
+function drop7(ev7) {
+  ev7.preventDefault();
+  var data7 = ev7.dataTransfer.getData("text7");
+  ev7.target.appendChild(document.getElementById(data7));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxG').ondragstart = function () { return false; };
+}
+
+function allowDrop8(ev8) {
+if(document.getElementById("boxH").value == document.getElementById("response8").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev8.preventDefault();
+}
+
+function drag8(ev8) {
+  ev8.dataTransfer.setData("text8", ev8.target.id);
+}
+
+function drop8(ev8) {
+  ev8.preventDefault();
+  var data8 = ev8.dataTransfer.getData("text8");
+  ev8.target.appendChild(document.getElementById(data8));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxH').ondragstart = function () { return false; };
+}
+
+function allowDrop9(ev9) {
+if(document.getElementById("boxI").value == document.getElementById("response9").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev9.preventDefault();
+}
+
+function drag9(ev9) {
+  ev9.dataTransfer.setData("text9", ev9.target.id);
+}
+
+function drop9(ev9) {
+  ev9.preventDefault();
+  var data9 = ev9.dataTransfer.getData("text9");
+  ev9.target.appendChild(document.getElementById(data9));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxI').ondragstart = function () { return false; };
+}
+
+function allowDrop10(ev10) {
+if(document.getElementById("boxJ").value == document.getElementById("response10").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev10.preventDefault();
+}
+
+function drag10(ev10) {
+  ev10.dataTransfer.setData("text10", ev10.target.id);
+}
+
+function drop10(ev10) {
+  ev10.preventDefault();
+  var data10 = ev10.dataTransfer.getData("text10");
+  ev10.target.appendChild(document.getElementById(data10));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxJ').ondragstart = function () { return false; };
+}
+
+function allowDrop11(ev11) {
+if(document.getElementById("boxK").value == document.getElementById("response11").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev11.preventDefault();
+}
+
+function drag11(ev11) {
+  ev11.dataTransfer.setData("text11", ev11.target.id);
+}
+
+function drop11(ev11) {
+  ev11.preventDefault();
+  var data11 = ev11.dataTransfer.getData("text11");
+  ev11.target.appendChild(document.getElementById(data11));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxK').ondragstart = function () { return false; };
+}
+
+function allowDrop12(ev12) {
+if(document.getElementById("boxL").value == document.getElementById("response12").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev12.preventDefault();
+}
+
+function drag12(ev12) {
+  ev12.dataTransfer.setData("text12", ev12.target.id);
+}
+
+function drop12(ev12) {
+  ev12.preventDefault();
+  var data12 = ev12.dataTransfer.getData("text12");
+  ev12.target.appendChild(document.getElementById(data12));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxL').ondragstart = function () { return false; };
+}
+
+function allowDrop13(ev13) {
+if(document.getElementById("boxM").value == document.getElementById("response13").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev13.preventDefault();
+}
+
+function drag13(ev13) {
+  ev13.dataTransfer.setData("text13", ev13.target.id);
+}
+
+function drop13(ev13) {
+  ev13.preventDefault();
+  var data13 = ev13.dataTransfer.getData("text13");
+  ev13.target.appendChild(document.getElementById(data13));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxM').ondragstart = function () { return false; };
+}
+
+function allowDrop14(ev14) {
+if(document.getElementById("boxN").value == document.getElementById("response14").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev14.preventDefault();
+}
+
+function drag14(ev14) {
+  ev14.dataTransfer.setData("text14", ev14.target.id);
+}
+
+function drop14(ev14) {
+  ev14.preventDefault();
+  var data14 = ev14.dataTransfer.getData("text14");
+  ev14.target.appendChild(document.getElementById(data14));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxN').ondragstart = function () { return false; };
+}
+
+function allowDrop15(ev15) {
+if(document.getElementById("boxO").value == document.getElementById("response15").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev15.preventDefault();
+}
+
+function drag15(ev15) {
+  ev15.dataTransfer.setData("text15", ev15.target.id);
+}
+
+function drop15(ev15) {
+  ev15.preventDefault();
+  var data15 = ev15.dataTransfer.getData("text15");
+  ev15.target.appendChild(document.getElementById(data15));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxO').ondragstart = function () { return false; };
+}
+
+function allowDrop16(ev16) {
+if(document.getElementById("boxP").value == document.getElementById("response16").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev16.preventDefault();
+}
+
+function drag16(ev16) {
+  ev16.dataTransfer.setData("text16", ev16.target.id);
+}
+
+function drop16(ev16) {
+  ev16.preventDefault();
+  var data16 = ev16.dataTransfer.getData("text16");
+  ev16.target.appendChild(document.getElementById(data16));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxP').ondragstart = function () { return false; };
+}
+
+function allowDrop17(ev17) {
+if(document.getElementById("boxQ").value == document.getElementById("response17").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev17.preventDefault();
+}
+
+function drag17(ev17) {
+  ev17.dataTransfer.setData("text17", ev17.target.id);
+}
+
+function drop17(ev17) {
+  ev17.preventDefault();
+  var data17 = ev17.dataTransfer.getData("text17");
+  ev17.target.appendChild(document.getElementById(data17));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxQ').ondragstart = function () { return false; };
+}
+
+function allowDrop18(ev18) {
+if(document.getElementById("boxR").value == document.getElementById("response18").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev18.preventDefault();
+}
+
+function drag18(ev18) {
+  ev18.dataTransfer.setData("text18", ev18.target.id);
+}
+
+function drop18(ev18) {
+  ev18.preventDefault();
+  var data18 = ev18.dataTransfer.getData("text18");
+  ev18.target.appendChild(document.getElementById(data18));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxR').ondragstart = function () { return false; };
+}
+
+function allowDrop19(ev19) {
+if(document.getElementById("boxS").value == document.getElementById("response19").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev19.preventDefault();
+}
+
+function drag19(ev19) {
+  ev19.dataTransfer.setData("text19", ev19.target.id)
+}
+
+function drop19(ev19) {
+  ev19.preventDefault();
+  var data19 = ev19.dataTransfer.getData("text19");
+  ev19.target.appendChild(document.getElementById(data19));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxS').ondragstart = function () { return false; };
+}
+
+function allowDrop20(ev20) {
+if(document.getElementById("boxT").value == document.getElementById("response20").value)
+  {
+  document.getElementById("scoring").innerHTML = "";
+  }
+  else
+  {
+  //document.getElementById("demo").innerHTML = "Hi there";
+  }
+  ev20.preventDefault();
+}
+
+function drag20(ev20) {
+  ev20.dataTransfer.setData("text20", ev20.target.id);
+}
+
+function drop20(ev20) {
+  ev20.preventDefault();
+  var data20 = ev20.dataTransfer.getData("text20");
+  ev20.target.appendChild(document.getElementById(data20));
+  score++;
+  if(score == 20)
+  {
+    document.getElementById("congrats").innerHTML = "Congratulations You solved all the questions correct";
+            document.getElementById("part1").hidden = false;
+            document.getElementById("goodjob").hidden = false;
+            document.getElementById("part2").hidden = false;
+      $('.ml2').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+        }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+        });
+    document.getElementById("totscore").innerHTML = "Total Correct Answer "  + score;
+    document.getElementById("totcoins").innerHTML = "Total Coins Achieved "  + score;
+    document.getElementById("coins").hidden = false;
+    document.getElementById("my_audio").pause();
+      setTimeout(function(){ 
+      document.getElementById("drop").play(); 
+      }, 1000)
+  }
+  document.getElementById('boxT').ondragstart = function () { return false; };
+}
+
+</script>
+
+</head>
+<body>
+  <audio src="Fast-clock-ticking-sound-effect.mp3" id="my_audio" loop="loop"></audio>
+  <audio src="Train Horn Low-SoundBible.com-1744689113.mp3" id="my_end"></audio>
+  <audio src="coindrop.mp3" id="drop" loop="loop"></audio>
+  <script type="text/javascript">
+    window.onload=function(){
+      document.getElementById("time").innerHTML = timeout();
+      var aud = document.getElementById("my_audio").play();
+    }
+  </script>
+  <div class="d-flex justify-content-center bg-secondary mb-3">
+<img src="Logo.png" width="700px" height="700px" style="position: fixed; margin: 0; z-index: -1; opacity: 0.05">
+</div>
+  <script type="text/javascript">
+        var timeLeft=20*60;
+    </script>
+
+    <div class='container angrytext' style="margin-right: -55%; margin-top: -10px; position: absolute; z-index: -1"><img src="clock.png" width="150px" height="150px"></div>
+    <h3><div class="container angrytime" id="time" style="margin-top: 35px; margin-left: 45px; float: left; font-size: 18pt">Timeout</div></h3><br>
+  <h3 id="scoring" style="font-size: 18pt ; font-family: Comic Sans MS, Comic Sans, cursive; color: #BA55D3; float: right;"></h3><br><br><br>
+  <br><br><br>
+  <center><h2 id="totscore" style="font-family: Comic Sans MS, Comic Sans, cursive; font-weight: bold; color: #BA55D3"></h2></center>
+  <center><h2 id="totcoins" style="font-family: Comic Sans MS, Comic Sans, cursive; font-weight: bold; color: #BA55D3"></h2></center>
+  <center><img src="coins.gif" id="coins" hidden="true" width="200px" height="200px"></center>
+  <h4 class="ml2" id="congrats" style="text-align: center; font-family: Comic Sans MS, Comic Sans, cursive;"></h4><br>
+  <div class="container" align="center">
+    <img src="party1.gif" id="part1" hidden="true" width="300px" height="400px">
+    <img src="good job.gif" id="goodjob" hidden="true" width="300px" height="400px">
+    <img src="party1.gif" id="part2" hidden="true" width="300px" height="400px">
+  </div>
+  <br>
+
+  <h2 style="position: fixed; margin-top: -50px ; font-family: Comic Sans MS, Comic Sans, cursive; font-weight: bold ; color: #9370DB">Clues</h2>
+  <div id="left">
+      <img id="boxA" src="1.PNG" draggable="true" ondragstart="drag(event)" value="a1" width="110px" height="40px"><br><br>
+      <img id="boxB" src="2.PNG" draggable="true" ondragstart="drag2(event)" value="b1" width="550px" height="40px"><br><br>
+      <img id="boxC" src="3.PNG" draggable="true" ondragstart="drag3(event)" value="c1" width="550px" height="40px"><br><br>
+      <img id="boxD" src="4.PNG" draggable="true" ondragstart="drag4(event)" value="d1" width="110px" height="40px"><br><br>
+      <img id="boxE" src="5.PNG" draggable="true" ondragstart="drag5(event)" value="e1" width="650px" height="40px"><br><br>
+      <img id="boxF" src="6.PNG" draggable="true" ondragstart="drag6(event)" value="f1" width="150px" height="40px"><br><br>
+      <img id="boxG" src="7.PNG" draggable="true" ondragstart="drag7(event)" value="g1" width="110px" height="40px"><br><br>
+      <img id="boxH" src="8.PNG" draggable="true" ondragstart="drag8(event)" value="h1" width="110px" height="40px"><br><br>
+      <img id="boxI" src="9.PNG" draggable="true" ondragstart="drag9(event)" value="i1" width="250px" height="40px"><br><br>
+      <img id="boxJ" src="10.PNG" draggable="true" ondragstart="drag10(event)" value="j1" width="110px" height="40px"><br><br>
+      <img id="boxK" src="11.PNG" draggable="true" ondragstart="drag11(event)" value="k1" width="150px" height="40px"><br><br>
+      <img id="boxL" src="12.PNG" draggable="true" ondragstart="drag12(event)" value="l1" width="110px" height="40px"><br><br>
+      <img id="boxM" src="13.PNG" draggable="true" ondragstart="drag13(event)" value="m1" width="60px" height="40px"><br><br>
+      <img id="boxN" src="14.PNG" draggable="true" ondragstart="drag14(event)" value="n1" width="60px" height="40px"><br><br>
+      <img id="boxO" src="15.PNG" draggable="true" ondragstart="drag15(event)" value="o1" width="80px" height="40px"><br><br>
+      <img id="boxP" src="16.PNG" draggable="true" ondragstart="drag16(event)" value="p1" width="150px" height="40px"><br><br>
+      <img id="boxQ" src="17.PNG" draggable="true" ondragstart="drag17(event)" value="q1" width="60px" height="40px"><br><br>
+      <img id="boxR" src="18.PNG" draggable="true" ondragstart="drag18(event)" value="r1" width="150px" height="40px"><br><br>
+      <img id="boxS" src="19.PNG" draggable="true" ondragstart="drag19(event)" value="s1" width="100px" height="40px"><br><br>
+      <img id="boxT" src="20.PNG" draggable="true" ondragstart="drag20(event)" value="t1" width="900px" height="40px"><br><br>
+  </div>
+  <h1 style="text-align: center ; font-family: Comic Sans MS, Comic Sans, cursive; color: #9370DB; font-weight: bold;">The Untold Story</h1>
+  <br><br>
+  <div class="container" id="con">
+
+    <h3 style="text-align: justify; font-family: Comic Sans MS, Comic Sans, cursive; line-height: 45pt">An <input style="width: 180px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 39px" id="response1" ondrop="drop10(event)" ondragover="allowDrop10(event)" value="a1"></div> King realized that if he died he has no one to take over the <input style="width: 180px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 930px" id="response2" ondrop="drop19(event)" ondragover="allowDrop19(event)" value="b1"></div> He decided to adopt a <input style="width: 180px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 260px" id="response3" ondrop="drop17(event)" ondragover="allowDrop17(event)" value="c1"></div> He launched a <input style="width: 180px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 615px" id="response4" ondrop="drop16(event)" ondragover="allowDrop16(event)" value="d1"></div> and 10 boys made it to the top. The King said to them,<br> <input style="width: 900px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 0px" id="response5" ondrop="drop20(event)" ondragover="allowDrop20(event)" value="e1"></div>. He gave each boy a seed of <input style="width: 180px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 133px" id="response6" ondrop="drop14(event)" ondragover="allowDrop14(event)" value="f1"></div> and told them to take the seed home, plant and nurture it for <input style="width: 180px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 0px" id="response7" ondrop="drop12(event)" ondragover="allowDrop12(event)" value="g1"></div>. The 10 boys took their seeds and ran home to plant their seeds. In one home, the boy and his parents were <input style="width: 180px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 291px" id="response8" ondrop="drop13(event)" ondragover="allowDrop13(event)" value="h1"></div> when the seed <input style="width: 180px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 651px" id="response9" ondrop="drop8(event)" ondragover="allowDrop8(event)" value="i1"></div> to <input style="width: 180px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 872px" id="response10" ondrop="drop15(event)" ondragover="allowDrop15(event)" value="j1"></div>. The boy had done <input style="width: 180px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 163px" id="response11" ondrop="drop18(event)" ondragover="allowDrop18(event)" value="k1"></div> but he failed. His <input style="width: 180px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 568px" id="response12" ondrop="drop7(event)" ondragover="allowDrop7(event)" value="l1"></div> advised him to buy a seed and plant it but his <input style="width: 180px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 179px" id="response13" ondrop="drop6(event)" ondragover="allowDrop6(event)" value="m1"></div> parents who had always taught him <input style="width: 180px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 774px" id="response14" ondrop="drop(event)" ondragover="allowDrop(event)" value="n1"></div> refused. The day came and the 10 boys went to the palace. All the 9 boys were <input style="width: 180px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 755px" id="response15" ondrop="drop11(event)" ondragover="allowDrop11(event)" value="o1"></div>.
+    The King went to each boy asking – <input style="width: 600px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 270px" id="response16" ondrop="drop3(event)" ondragover="allowDrop3(event)" value="p1"></div> And each boy said <input style="width: 300px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 0px" id="response17" ondrop="drop9(event)" ondragover="allowDrop9(event)" value="q1"></div>. The King would nod and move down the line until the last boy in the line who was shaking with fear. The King asked him – <input style="width: 600px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 0px" id="response18" ondrop="drop2(event)" ondragover="allowDrop2(event)" value="r1"></div> The boy said <input style="width: 700px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 0px" id="response19" ondrop="drop5(event)" ondragover="allowDrop5(event)" value="s1"></div> The King went to the throne with the boy and said, “I gave these boys boiled seeds and a boiled seed cannot sprout. If a King must have one quality, it must be <input style="width: 180px; height: 55px;" type=""><div style="margin-top: -58px; margin-left: 313px" id="response20" ondrop="drop4(event)" ondragover="allowDrop4(event)" value="t1"></div> and only this boy passed the test.”</h3>
+
+  </div>
+</body>
+</html>
